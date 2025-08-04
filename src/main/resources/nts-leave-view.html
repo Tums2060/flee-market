@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Remaining Leave Days - Non-Teaching Staff</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/non-teaching-staff.css">
+</head>
+<body class="nts-body">
+    <div class="nts-layout">
+        <!-- Sidebar -->
+        <aside class="nts-sidebar">
+            <div class="nts-sidebar-header">
+                <h2>Non-Teaching Staff</h2>
+                <p>Management System</p>
+            </div>
+            <nav>
+                <ul class="nts-nav">
+                    <li class="nts-nav-item">
+                        <a href="nts-dashboard.html" class="nts-nav-link">
+                            <span class="nts-nav-icon">📊</span>
+                            Dashboard
+                        </a>
+                    </li>
+                    <li class="nts-nav-item">
+                        <a href="nts-biodata.html" class="nts-nav-link">
+                            <span class="nts-nav-icon">👤</span>
+                            Biodata
+                        </a>
+                    </li>
+                    <li class="nts-nav-item">
+                        <a href="nts-tasks-view.html" class="nts-nav-link">
+                            <span class="nts-nav-icon">📋</span>
+                            View Assigned Tasks
+                        </a>
+                    </li>
+                    <li class="nts-nav-item">
+                        <a href="nts-tasks-assign.html" class="nts-nav-link">
+                            <span class="nts-nav-icon">➕</span>
+                            Assign Task to Staff
+                        </a>
+                    </li>
+                    <li class="nts-nav-item">
+                        <a href="nts-clubs-sports.html" class="nts-nav-link">
+                            <span class="nts-nav-icon">⚽</span>
+                            Clubs & Sports
+                        </a>
+                    </li>
+                    <li class="nts-nav-item">
+                        <a href="nts-inventory.html" class="nts-nav-link">
+                            <span class="nts-nav-icon">📦</span>
+                            Inventory Management
+                        </a>
+                    </li>
+                    <li class="nts-nav-item">
+                        <a href="nts-scholarships.html" class="nts-nav-link">
+                            <span class="nts-nav-icon">🎓</span>
+                            Scholarships
+                        </a>
+                    </li>
+                    <li class="nts-nav-item">
+                        <a href="nts-leave-view.html" class="nts-nav-link active">
+                            <span class="nts-nav-icon">📅</span>
+                            View Remaining Leave Days
+                        </a>
+                    </li>
+                    <li class="nts-nav-item">
+                        <a href="nts-leave-request.html" class="nts-nav-link">
+                            <span class="nts-nav-icon">📝</span>
+                            Request for a Leave
+                        </a>
+                    </li>
+                    <li class="nts-nav-item">
+                        <a href="nts-settings.html" class="nts-nav-link">
+                            <span class="nts-nav-icon">⚙️</span>
+                            Settings
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="nts-main">
+            <!-- Header -->
+            <header class="nts-header">
+                <h1>View Remaining Leave Days</h1>
+                <div class="nts-user-info">
+                    <span>Welcome, John Doe</span>
+                    <div class="nts-user-avatar">JD</div>
+                </div>
+            </header>
+
+            <!-- Leave Balance Overview -->
+            <div class="nts-stats-grid">
+                <div class="nts-stat-card">
+                    <span class="nts-stat-number">25</span>
+                    <span class="nts-stat-label">Annual Leave Remaining</span>
+                </div>
+                <div class="nts-stat-card">
+                    <span class="nts-stat-number">8</span>
+                    <span class="nts-stat-label">Sick Leave Remaining</span>
+                </div>
+                <div class="nts-stat-card">
+                    <span class="nts-stat-number">3</span>
+                    <span class="nts-stat-label">Personal Days Left</span>
+                </div>
+                <div class="nts-stat-card">
+                    <span class="nts-stat-number">15</span>
+                    <span class="nts-stat-label">Days Used This Year</span>
+                </div>
+            </div>
+
+            <!-- Leave Balance Details -->
+            <div class="nts-card">
+                <div class="nts-card-header">
+                    <h3>Leave Balance Details (2024)</h3>
+                </div>
+                <div class="nts-card-body">
+                    <table class="nts-table">
+                        <thead>
+                            <tr>
+                                <th>Leave Type</th>
+                                <th>Total Allocated</th>
+                                <th>Used</th>
+                                <th>Remaining</th>
+                                <th>Pending Requests</th>
+                                <th>Available</th>
+                                <th>Expires</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="nts-badge nts-badge-primary">Annual Leave</span></td>
+                                <td>30 days</td>
+                                <td>5 days</td>
+                                <td><strong>25 days</strong></td>
+                                <td>2 days</td>
+                                <td>23 days</td>
+                                <td>Dec 31, 2024</td>
+                            </tr>
+                            <tr>
+                                <td><span class="nts-badge nts-badge-success">Sick Leave</span></td>
+                                <td>12 days</td>
+                                <td>4 days</td>
+                                <td><strong>8 days</strong></td>
+                                <td>0 days</td>
+                                <td>8 days</td>
+                                <td>Carry forward</td>
+                            </tr>
+                            <tr>
+                                <td><span class="nts-badge nts-badge-warning">Personal Days</span></td>
+                                <td>5 days</td>
+                                <td>2 days</td>
+                                <td><strong>3 days</strong></td>
+                                <td>0 days</td>
+                                <td>3 days</td>
+                                <td>Dec 31, 2024</td>
+                            </tr>
+                            <tr>
+                                <td><span class="nts-badge nts-badge-secondary">Maternity Leave</span></td>
+                                <td>90 days</td>
+                                <td>0 days</td>
+                                <td><strong>90 days</strong></td>
+                                <td>0 days</td>
+                                <td>90 days</td>
+                                <td>As needed</td>
+                            </tr>
+                            <tr>
+                                <td><span class="nts-badge nts-badge-secondary">Compassionate Leave</span></td>
+                                <td>7 days</td>
+                                <td>0 days</td>
+                                <td><strong>7 days</strong></td>
+                                <td>0 days</td>
+                                <td>7 days</td>
+                                <td>As needed</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Visual Leave Calendar -->
+            <div class="nts-card">
+                <div class="nts-card-header nts-d-flex nts-justify-between nts-align-center">
+                    <h3>Leave Calendar - January 2024</h3>
+                    <div>
+                        <button class="nts-btn nts-btn-secondary nts-btn-small">← Previous</button>
+                        <button class="nts-btn nts-btn-secondary nts-btn-small">Next →</button>
+                    </div>
+                </div>
+                <div class="nts-card-body">
+                    <div style="display: grid; grid-template-columns: repeat(7, 1fr); gap: 5px; text-align: center;">
+                        <!-- Calendar Header -->
+                        <div style="font-weight: bold; padding: 10px; background-color: var(--nts-light-blue);">Sun</div>
+                        <div style="font-weight: bold; padding: 10px; background-color: var(--nts-light-blue);">Mon</div>
+                        <div style="font-weight: bold; padding: 10px; background-color: var(--nts-light-blue);">Tue</div>
+                        <div style="font-weight: bold; padding: 10px; background-color: var(--nts-light-blue);">Wed</div>
+                        <div style="font-weight: bold; padding: 10px; background-color: var(--nts-light-blue);">Thu</div>
+                        <div style="font-weight: bold; padding: 10px; background-color: var(--nts-light-blue);">Fri</div>
+                        <div style="font-weight: bold; padding: 10px; background-color: var(--nts-light-blue);">Sat</div>
+                        
+                        <!-- Calendar Days -->
+                        <div style="padding: 8px; color: var(--nts-grey);"></div>
+                        <div style="padding: 8px; border: 1px solid var(--nts-border);">1</div>
+                        <div style="padding: 8px; border: 1px solid var(--nts-border);">2</div>
+                        <div style="padding: 8px; border: 1px solid var(--nts-border);">3</div>
+                        <div style="padding: 8px; border: 1px solid var(--nts-border);">4</div>
+                        <div style="padding: 8px; border: 1px solid var(--nts-border);">5</div>
+                        <div style="padding: 8px; border: 1px solid var(--nts-border);">6</div>
+                        
+                        <div style="padding: 8px; border: 1px solid var(--nts-border);">7</div>
+                        <div style="padding: 8px; border: 1px solid var(--nts-border);">8</div>
+                        <div style="padding: 8px; border: 1px solid var(--nts-border);">9</div>
+                        <div style="padding: 8px; border: 1px solid var(--nts-border);">10</div>
+                        <div style="padding: 8px; border: 1px solid var(--nts-border);">11</div>
+                        <div style="padding: 8px; border: 1px solid var(--nts-border); background-color: #ffebee;">12<br><small>Sick</small></div>
+                        <div style="padding: 8px; border: 1px solid var(--nts-border);">13</div>
+                        
+                        <div style="padding: 8px; border: 1px solid var(--nts-border);">14</div>
+                        <div style="padding: 8px; border: 1px solid var(--nts-border); background-color: #e8f5e8;">15<br><small>Annual</small></div>
+                        <div style="padding: 8px; border: 1px solid var(--nts-border); background-color: #e8f5e8;">16<br><small>Annual</small></div>
+                        <div style="padding: 8px; border: 1px solid var(--nts-border);">17</div>
+                        <div style="padding: 8px; border: 1px solid var(--nts-border);">18</div>
+                        <div style="padding: 8px; border: 1px solid var(--nts-border);">19</div>
+                        <div style="padding: 8px; border: 1px solid var(--nts-border);">20</div>
+                        
+                        <div style="padding: 8px; border: 1px solid var(--nts-border);">21</div>
+                        <div style="padding: 8px; border: 1px solid var(--nts-border);">22</div>
+                        <div style="padding: 8px; border: 1px solid var(--nts-border);">23</div>
+                        <div style="padding: 8px; border: 1px solid var(--nts-border);">24</div>
+                        <div style="padding: 8px; border: 1px solid var(--nts-border); background-color: #fff3cd;">25<br><small>Pending</small></div>
+                        <div style="padding: 8px; border: 1px solid var(--nts-border); background-color: #fff3cd;">26<br><small>Pending</small></div>
+                        <div style="padding: 8px; border: 1px solid var(--nts-border);">27</div>
+                        
+                        <div style="padding: 8px; border: 1px solid var(--nts-border);">28</div>
+                        <div style="padding: 8px; border: 1px solid var(--nts-border);">29</div>
+                        <div style="padding: 8px; border: 1px solid var(--nts-border);">30</div>
+                        <div style="padding: 8px; border: 1px solid var(--nts-border);">31</div>
+                        <div style="padding: 8px; color: var(--nts-grey);"></div>
+                        <div style="padding: 8px; color: var(--nts-grey);"></div>
+                        <div style="padding: 8px; color: var(--nts-grey);"></div>
+                    </div>
+                    
+                    <div class="nts-mt-20">
+                        <h4>Legend:</h4>
+                        <div class="nts-d-flex nts-gap-20">
+                            <div><span style="background-color: #e8f5e8; padding: 5px 10px; border-radius: 3px;">Annual Leave</span></div>
+                            <div><span style="background-color: #ffebee; padding: 5px 10px; border-radius: 3px;">Sick Leave</span></div>
+                            <div><span style="background-color: #fff3cd; padding: 5px 10px; border-radius: 3px;">Pending Request</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Leave History -->
+            <div class="nts-card">
+                <div class="nts-card-header nts-d-flex nts-justify-between nts-align-center">
+                    <h3>Leave History</h3>
+                    <div>
+                        <select class="nts-form-control" style="width: auto; display: inline-block;">
+                            <option>2024</option>
+                            <option>2023</option>
+                            <option>2022</option>
+                        </select>
+                        <button class="nts-btn nts-btn-secondary nts-btn-small">Export History</button>
+                    </div>
+                </div>
+                <div class="nts-card-body">
+                    <table class="nts-table">
+                        <thead>
+                            <tr>
+                                <th>Leave Type</th>
+                                <th>Start Date</th>
+                                <th>End Date</th>
+                                <th>Days</th>
+                                <th>Reason</th>
+                                <th>Status</th>
+                                <th>Approved By</th>
+                                <th>Applied Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="nts-badge nts-badge-primary">Annual Leave</span></td>
+                                <td>2024-01-15</td>
+                                <td>2024-01-16</td>
+                                <td>2</td>
+                                <td>Family vacation</td>
+                                <td><span class="nts-badge nts-badge-success">Approved</span></td>
+                                <td>Manager Smith</td>
+                                <td>2024-01-05</td>
+                            </tr>
+                            <tr>
+                                <td><span class="nts-badge nts-badge-success">Sick Leave</span></td>
+                                <td>2024-01-12</td>
+                                <td>2024-01-12</td>
+                                <td>1</td>
+                                <td>Flu symptoms</td>
+                                <td><span class="nts-badge nts-badge-success">Approved</span></td>
+                                <td>Manager Smith</td>
+                                <td>2024-01-12</td>
+                            </tr>
+                            <tr>
+                                <td><span class="nts-badge nts-badge-primary">Annual Leave</span></td>
+                                <td>2024-01-25</td>
+                                <td>2024-01-26</td>
+                                <td>2</td>
+                                <td>Personal matters</td>
+                                <td><span class="nts-badge nts-badge-warning">Pending</span></td>
+                                <td>-</td>
+                                <td>2024-01-18</td>
+                            </tr>
+                            <tr>
+                                <td><span class="nts-badge nts-badge-warning">Personal Day</span></td>
+                                <td>2023-12-22</td>
+                                <td>2023-12-22</td>
+                                <td>1</td>
+                                <td>Doctor appointment</td>
+                                <td><span class="nts-badge nts-badge-success">Approved</span></td>
+                                <td>Manager Smith</td>
+                                <td>2023-12-20</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Quick Actions -->
+            <div class="nts-card">
+                <div class="nts-card-header">
+                    <h3>Quick Actions</h3>
+                </div>
+                <div class="nts-card-body">
+                    <div class="nts-d-flex nts-gap-10">
+                        <a href="nts-leave-request.html" class="nts-btn nts-btn-primary">Request New Leave</a>
+                        <button class="nts-btn nts-btn-secondary">Download Leave Summary</button>
+                        <button class="nts-btn nts-btn-warning">Check Team Calendar</button>
+                        <button class="nts-btn nts-btn-success">Leave Policy Guidelines</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/nts-leave-view.js"></script>
+</body>
+</html>
