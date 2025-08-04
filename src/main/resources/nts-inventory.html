@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Management - Non-Teaching Staff</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/non-teaching-staff.css">
+</head>
+<body class="nts-body">
+    <div class="nts-layout">
+        <!-- Sidebar -->
+        <aside class="nts-sidebar">
+            <div class="nts-sidebar-header">
+                <h2>Non-Teaching Staff</h2>
+                <p>Management System</p>
+            </div>
+            <nav>
+                <ul class="nts-nav">
+                    <li class="nts-nav-item">
+                        <a href="nts-dashboard.html" class="nts-nav-link">
+                            <span class="nts-nav-icon">📊</span>
+                            Dashboard
+                        </a>
+                    </li>
+                    <li class="nts-nav-item">
+                        <a href="nts-biodata.html" class="nts-nav-link">
+                            <span class="nts-nav-icon">👤</span>
+                            Biodata
+                        </a>
+                    </li>
+                    <li class="nts-nav-item">
+                        <a href="nts-tasks-view.html" class="nts-nav-link">
+                            <span class="nts-nav-icon">📋</span>
+                            View Assigned Tasks
+                        </a>
+                    </li>
+                    <li class="nts-nav-item">
+                        <a href="nts-tasks-assign.html" class="nts-nav-link">
+                            <span class="nts-nav-icon">➕</span>
+                            Assign Task to Staff
+                        </a>
+                    </li>
+                    <li class="nts-nav-item">
+                        <a href="nts-clubs-sports.html" class="nts-nav-link">
+                            <span class="nts-nav-icon">⚽</span>
+                            Clubs & Sports
+                        </a>
+                    </li>
+                    <li class="nts-nav-item">
+                        <a href="nts-inventory.html" class="nts-nav-link active">
+                            <span class="nts-nav-icon">📦</span>
+                            Inventory Management
+                        </a>
+                    </li>
+                    <li class="nts-nav-item">
+                        <a href="nts-scholarships.html" class="nts-nav-link">
+                            <span class="nts-nav-icon">🎓</span>
+                            Scholarships
+                        </a>
+                    </li>
+                    <li class="nts-nav-item">
+                        <a href="nts-leave-view.html" class="nts-nav-link">
+                            <span class="nts-nav-icon">📅</span>
+                            View Remaining Leave Days
+                        </a>
+                    </li>
+                    <li class="nts-nav-item">
+                        <a href="nts-leave-request.html" class="nts-nav-link">
+                            <span class="nts-nav-icon">📝</span>
+                            Request for a Leave
+                        </a>
+                    </li>
+                    <li class="nts-nav-item">
+                        <a href="nts-settings.html" class="nts-nav-link">
+                            <span class="nts-nav-icon">⚙️</span>
+                            Settings
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="nts-main">
+            <!-- Header -->
+            <header class="nts-header">
+                <h1>Inventory Management</h1>
+                <div class="nts-user-info">
+                    <span>Welcome, John Doe</span>
+                    <div class="nts-user-avatar">JD</div>
+                </div>
+            </header>
+
+            <!-- Inventory Statistics -->
+            <div class="nts-stats-grid">
+                <div class="nts-stat-card">
+                    <span class="nts-stat-number">450</span>
+                    <span class="nts-stat-label">Total Items</span>
+                </div>
+                <div class="nts-stat-card">
+                    <span class="nts-stat-number">12</span>
+                    <span class="nts-stat-label">Low Stock Items</span>
+                </div>
+                <div class="nts-stat-card">
+                    <span class="nts-stat-number">8</span>
+                    <span class="nts-stat-label">Out of Stock</span>
+                </div>
+                <div class="nts-stat-card">
+                    <span class="nts-stat-number">$15,420</span>
+                    <span class="nts-stat-label">Total Value</span>
+                </div>
+            </div>
+
+            <!-- Quick Actions -->
+            <div class="nts-card">
+                <div class="nts-card-header">
+                    <h3>Quick Actions</h3>
+                </div>
+                <div class="nts-card-body">
+                    <div class="nts-d-flex nts-gap-10">
+                        <button class="nts-btn nts-btn-primary">Add New Item</button>
+                        <button class="nts-btn nts-btn-success">Stock In</button>
+                        <button class="nts-btn nts-btn-warning">Stock Out</button>
+                        <button class="nts-btn nts-btn-secondary">Generate Report</button>
+                        <button class="nts-btn nts-btn-secondary">Export Inventory</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Filter and Search -->
+            <div class="nts-card">
+                <div class="nts-card-header">
+                    <h3>Filter Inventory</h3>
+                </div>
+                <div class="nts-card-body">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 15px; align-items: end;">
+                        <div class="nts-form-group nts-mb-0">
+                            <label class="nts-form-label" for="filter-category">Category</label>
+                            <select id="filter-category" class="nts-form-control">
+                                <option value="">All Categories</option>
+                                <option value="office-supplies">Office Supplies</option>
+                                <option value="cleaning">Cleaning Supplies</option>
+                                <option value="maintenance">Maintenance Tools</option>
+                                <option value="sports-equipment">Sports Equipment</option>
+                                <option value="electronics">Electronics</option>
+                                <option value="furniture">Furniture</option>
+                            </select>
+                        </div>
+                        <div class="nts-form-group nts-mb-0">
+                            <label class="nts-form-label" for="filter-status">Stock Status</label>
+                            <select id="filter-status" class="nts-form-control">
+                                <option value="">All Status</option>
+                                <option value="in-stock">In Stock</option>
+                                <option value="low-stock">Low Stock</option>
+                                <option value="out-of-stock">Out of Stock</option>
+                            </select>
+                        </div>
+                        <div class="nts-form-group nts-mb-0">
+                            <label class="nts-form-label" for="filter-location">Location</label>
+                            <select id="filter-location" class="nts-form-control">
+                                <option value="">All Locations</option>
+                                <option value="main-store">Main Store</option>
+                                <option value="office">Office</option>
+                                <option value="maintenance-room">Maintenance Room</option>
+                                <option value="sports-complex">Sports Complex</option>
+                                <option value="library">Library</option>
+                            </select>
+                        </div>
+                        <button class="nts-btn nts-btn-primary">Apply Filters</button>
+                    </div>
+                    <div class="nts-mt-20">
+                        <input type="text" placeholder="Search items by name, code, or description..." class="nts-form-control" style="width: 100%;">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Low Stock Alerts -->
+            <div class="nts-card">
+                <div class="nts-card-header">
+                    <h3>🚨 Low Stock Alerts</h3>
+                </div>
+                <div class="nts-card-body">
+                    <div class="nts-alert nts-alert-warning">
+                        <strong>Urgent Action Required:</strong> 12 items are running low on stock and need immediate attention.
+                    </div>
+                    <table class="nts-table">
+                        <thead>
+                            <tr>
+                                <th>Item Code</th>
+                                <th>Item Name</th>
+                                <th>Current Stock</th>
+                                <th>Minimum Level</th>
+                                <th>Location</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>OS001</td>
+                                <td>A4 Copy Paper</td>
+                                <td><span class="nts-badge nts-badge-danger">5 packs</span></td>
+                                <td>20 packs</td>
+                                <td>Main Store</td>
+                                <td><button class="nts-btn nts-btn-primary nts-btn-small">Reorder</button></td>
+                            </tr>
+                            <tr>
+                                <td>CS003</td>
+                                <td>Floor Cleaner</td>
+                                <td><span class="nts-badge nts-badge-warning">8 bottles</span></td>
+                                <td>15 bottles</td>
+                                <td>Maintenance Room</td>
+                                <td><button class="nts-btn nts-btn-primary nts-btn-small">Reorder</button></td>
+                            </tr>
+                            <tr>
+                                <td>MT005</td>
+                                <td>Screwdriver Set</td>
+                                <td><span class="nts-badge nts-badge-danger">2 sets</span></td>
+                                <td>5 sets</td>
+                                <td>Maintenance Room</td>
+                                <td><button class="nts-btn nts-btn-primary nts-btn-small">Reorder</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Inventory List -->
+            <div class="nts-card">
+                <div class="nts-card-header nts-d-flex nts-justify-between nts-align-center">
+                    <h3>Inventory Items</h3>
+                    <div>
+                        <button class="nts-btn nts-btn-secondary nts-btn-small">Export to PDF</button>
+                        <button class="nts-btn nts-btn-success nts-btn-small">Export to Excel</button>
+                    </div>
+                </div>
+                <div class="nts-card-body">
+                    <table class="nts-table">
+                        <thead>
+                            <tr>
+                                <th>Item Code</th>
+                                <th>Item Name</th>
+                                <th>Category</th>
+                                <th>Current Stock</th>
+                                <th>Unit Price</th>
+                                <th>Total Value</th>
+                                <th>Location</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>OS001</td>
+                                <td>A4 Copy Paper</td>
+                                <td>Office Supplies</td>
+                                <td>5 packs</td>
+                                <td>$8.50</td>
+                                <td>$42.50</td>
+                                <td>Main Store</td>
+                                <td><span class="nts-badge nts-badge-danger">Low Stock</span></td>
+                                <td>
+                                    <button class="nts-btn nts-btn-primary nts-btn-small">View</button>
+                                    <button class="nts-btn nts-btn-success nts-btn-small">Stock In</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>OS002</td>
+                                <td>Ballpoint Pens (Blue)</td>
+                                <td>Office Supplies</td>
+                                <td>150 pieces</td>
+                                <td>$0.50</td>
+                                <td>$75.00</td>
+                                <td>Office</td>
+                                <td><span class="nts-badge nts-badge-success">In Stock</span></td>
+                                <td>
+                                    <button class="nts-btn nts-btn-primary nts-btn-small">View</button>
+                                    <button class="nts-btn nts-btn-warning nts-btn-small">Stock Out</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>CS001</td>
+                                <td>Toilet Paper</td>
+                                <td>Cleaning Supplies</td>
+                                <td>45 rolls</td>
+                                <td>$1.20</td>
+                                <td>$54.00</td>
+                                <td>Main Store</td>
+                                <td><span class="nts-badge nts-badge-success">In Stock</span></td>
+                                <td>
+                                    <button class="nts-btn nts-btn-primary nts-btn-small">View</button>
+                                    <button class="nts-btn nts-btn-warning nts-btn-small">Stock Out</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>SE001</td>
+                                <td>Football</td>
+                                <td>Sports Equipment</td>
+                                <td>0 pieces</td>
+                                <td>$25.00</td>
+                                <td>$0.00</td>
+                                <td>Sports Complex</td>
+                                <td><span class="nts-badge nts-badge-danger">Out of Stock</span></td>
+                                <td>
+                                    <button class="nts-btn nts-btn-primary nts-btn-small">View</button>
+                                    <button class="nts-btn nts-btn-success nts-btn-small">Reorder</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>MT001</td>
+                                <td>Hammer</td>
+                                <td>Maintenance Tools</td>
+                                <td>8 pieces</td>
+                                <td>$15.00</td>
+                                <td>$120.00</td>
+                                <td>Maintenance Room</td>
+                                <td><span class="nts-badge nts-badge-success">In Stock</span></td>
+                                <td>
+                                    <button class="nts-btn nts-btn-primary nts-btn-small">View</button>
+                                    <button class="nts-btn nts-btn-warning nts-btn-small">Stock Out</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Recent Transactions -->
+            <div class="nts-card">
+                <div class="nts-card-header">
+                    <h3>Recent Inventory Transactions</h3>
+                </div>
+                <div class="nts-card-body">
+                    <table class="nts-table">
+                        <thead>
+                            <tr>
+                                <th>Transaction ID</th>
+                                <th>Type</th>
+                                <th>Item</th>
+                                <th>Quantity</th>
+                                <th>Date</th>
+                                <th>Staff Member</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>TXN001</td>
+                                <td><span class="nts-badge nts-badge-success">Stock In</span></td>
+                                <td>A4 Copy Paper</td>
+                                <td>+50 packs</td>
+                                <td>2024-01-15</td>
+                                <td>Emily Davis</td>
+                                <td><span class="nts-badge nts-badge-success">Completed</span></td>
+                            </tr>
+                            <tr>
+                                <td>TXN002</td>
+                                <td><span class="nts-badge nts-badge-warning">Stock Out</span></td>
+                                <td>Floor Cleaner</td>
+                                <td>-5 bottles</td>
+                                <td>2024-01-14</td>
+                                <td>Michael Smith</td>
+                                <td><span class="nts-badge nts-badge-success">Completed</span></td>
+                            </tr>
+                            <tr>
+                                <td>TXN003</td>
+                                <td><span class="nts-badge nts-badge-primary">Transfer</span></td>
+                                <td>Ballpoint Pens</td>
+                                <td>25 pieces</td>
+                                <td>2024-01-13</td>
+                                <td>Sarah Johnson</td>
+                                <td><span class="nts-badge nts-badge-warning">Pending</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/nts-inventory.js"></script>
+</body>
+</html>

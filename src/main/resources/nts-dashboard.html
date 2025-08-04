@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Non-Teaching Staff Dashboard</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/non-teaching-staff.css">
+</head>
+<body class="nts-body">
+    <div class="nts-layout">
+        <!-- Sidebar -->
+        <aside class="nts-sidebar">
+            <div class="nts-sidebar-header">
+                <h2>Non-Teaching Staff</h2>
+                <p>Management System</p>
+            </div>
+            <nav>
+                <ul class="nts-nav">
+                    <li class="nts-nav-item">
+                        <a href="nts-dashboard.html" class="nts-nav-link active">
+                            <span class="nts-nav-icon">📊</span>
+                            Dashboard
+                        </a>
+                    </li>
+                    <li class="nts-nav-item">
+                        <a href="nts-biodata.html" class="nts-nav-link">
+                            <span class="nts-nav-icon">👤</span>
+                            Biodata
+                        </a>
+                    </li>
+                    <li class="nts-nav-item">
+                        <a href="nts-tasks-view.html" class="nts-nav-link">
+                            <span class="nts-nav-icon">📋</span>
+                            View Assigned Tasks
+                        </a>
+                    </li>
+                    <li class="nts-nav-item">
+                        <a href="nts-tasks-assign.html" class="nts-nav-link">
+                            <span class="nts-nav-icon">➕</span>
+                            Assign Task to Staff
+                        </a>
+                    </li>
+                    <li class="nts-nav-item">
+                        <a href="nts-clubs-sports.html" class="nts-nav-link">
+                            <span class="nts-nav-icon">⚽</span>
+                            Clubs & Sports
+                        </a>
+                    </li>
+                    <li class="nts-nav-item">
+                        <a href="nts-inventory.html" class="nts-nav-link">
+                            <span class="nts-nav-icon">📦</span>
+                            Inventory Management
+                        </a>
+                    </li>
+                    <li class="nts-nav-item">
+                        <a href="nts-scholarships.html" class="nts-nav-link">
+                            <span class="nts-nav-icon">🎓</span>
+                            Scholarships
+                        </a>
+                    </li>
+                    <li class="nts-nav-item">
+                        <a href="nts-leave-view.html" class="nts-nav-link">
+                            <span class="nts-nav-icon">📅</span>
+                            View Remaining Leave Days
+                        </a>
+                    </li>
+                    <li class="nts-nav-item">
+                        <a href="nts-leave-request.html" class="nts-nav-link">
+                            <span class="nts-nav-icon">📝</span>
+                            Request for a Leave
+                        </a>
+                    </li>
+                    <li class="nts-nav-item">
+                        <a href="nts-settings.html" class="nts-nav-link">
+                            <span class="nts-nav-icon">⚙️</span>
+                            Settings
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="nts-main">
+            <!-- Header -->
+            <header class="nts-header">
+                <h1>Dashboard</h1>
+                <div class="nts-user-info">
+                    <span>Welcome, John Doe</span>
+                    <div class="nts-user-avatar">JD</div>
+                </div>
+            </header>
+
+            <!-- Dashboard Stats -->
+            <div class="nts-stats-grid">
+                <div class="nts-stat-card">
+                    <span class="nts-stat-number">15</span>
+                    <span class="nts-stat-label">Pending Tasks</span>
+                </div>
+                <div class="nts-stat-card">
+                    <span class="nts-stat-number">8</span>
+                    <span class="nts-stat-label">Active Clubs</span>
+                </div>
+                <div class="nts-stat-card">
+                    <span class="nts-stat-number">25</span>
+                    <span class="nts-stat-label">Leave Days Remaining</span>
+                </div>
+                <div class="nts-stat-card">
+                    <span class="nts-stat-number">120</span>
+                    <span class="nts-stat-label">Inventory Items</span>
+                </div>
+            </div>
+
+            <!-- Recent Activities -->
+            <div class="nts-card">
+                <div class="nts-card-header">
+                    <h3>Recent Activities</h3>
+                </div>
+                <div class="nts-card-body">
+                    <div class="nts-activity-list">
+                        <div class="nts-activity-item nts-d-flex nts-align-center nts-gap-10 nts-mb-10">
+                            <span class="nts-badge nts-badge-primary">Task</span>
+                            <span>Library cleaning task assigned to maintenance team</span>
+                            <span class="nts-text-muted">2 hours ago</span>
+                        </div>
+                        <div class="nts-activity-item nts-d-flex nts-align-center nts-gap-10 nts-mb-10">
+                            <span class="nts-badge nts-badge-success">Leave</span>
+                            <span>Leave request approved for Sarah Johnson</span>
+                            <span class="nts-text-muted">4 hours ago</span>
+                        </div>
+                        <div class="nts-activity-item nts-d-flex nts-align-center nts-gap-10 nts-mb-10">
+                            <span class="nts-badge nts-badge-warning">Inventory</span>
+                            <span>Low stock alert: Office supplies</span>
+                            <span class="nts-text-muted">1 day ago</span>
+                        </div>
+                        <div class="nts-activity-item nts-d-flex nts-align-center nts-gap-10 nts-mb-10">
+                            <span class="nts-badge nts-badge-primary">Sports</span>
+                            <span>Football club practice scheduled for tomorrow</span>
+                            <span class="nts-text-muted">2 days ago</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Actions -->
+            <div class="nts-card">
+                <div class="nts-card-header">
+                    <h3>Quick Actions</h3>
+                </div>
+                <div class="nts-card-body">
+                    <div class="nts-d-flex nts-gap-10">
+                        <a href="nts-tasks-assign.html" class="nts-btn nts-btn-primary">Assign New Task</a>
+                        <a href="nts-leave-request.html" class="nts-btn nts-btn-secondary">Request Leave</a>
+                        <a href="nts-inventory.html" class="nts-btn nts-btn-warning">Check Inventory</a>
+                        <a href="nts-biodata.html" class="nts-btn nts-btn-success">Update Profile</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pending Approvals -->
+            <div class="nts-card">
+                <div class="nts-card-header">
+                    <h3>Pending Approvals</h3>
+                </div>
+                <div class="nts-card-body">
+                    <table class="nts-table">
+                        <thead>
+                            <tr>
+                                <th>Type</th>
+                                <th>Staff Member</th>
+                                <th>Date Requested</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="nts-badge nts-badge-warning">Leave</span></td>
+                                <td>Michael Smith</td>
+                                <td>2024-01-15</td>
+                                <td><span class="nts-badge nts-badge-warning">Pending</span></td>
+                                <td>
+                                    <button class="nts-btn nts-btn-success nts-btn-small">Approve</button>
+                                    <button class="nts-btn nts-btn-danger nts-btn-small">Reject</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span class="nts-badge nts-badge-primary">Task</span></td>
+                                <td>Emily Davis</td>
+                                <td>2024-01-14</td>
+                                <td><span class="nts-badge nts-badge-warning">Pending</span></td>
+                                <td>
+                                    <button class="nts-btn nts-btn-success nts-btn-small">Approve</button>
+                                    <button class="nts-btn nts-btn-danger nts-btn-small">Reject</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span class="nts-badge nts-badge-secondary">Equipment</span></td>
+                                <td>Robert Wilson</td>
+                                <td>2024-01-13</td>
+                                <td><span class="nts-badge nts-badge-warning">Pending</span></td>
+                                <td>
+                                    <button class="nts-btn nts-btn-success nts-btn-small">Approve</button>
+                                    <button class="nts-btn nts-btn-danger nts-btn-small">Reject</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/nts-dashboard.js"></script>
+</body>
+</html>

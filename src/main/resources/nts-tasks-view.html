@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Assigned Tasks - Non-Teaching Staff</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/non-teaching-staff.css">
+</head>
+<body class="nts-body">
+    <div class="nts-layout">
+        <!-- Sidebar -->
+        <aside class="nts-sidebar">
+            <div class="nts-sidebar-header">
+                <h2>Non-Teaching Staff</h2>
+                <p>Management System</p>
+            </div>
+            <nav>
+                <ul class="nts-nav">
+                    <li class="nts-nav-item">
+                        <a href="nts-dashboard.html" class="nts-nav-link">
+                            <span class="nts-nav-icon">📊</span>
+                            Dashboard
+                        </a>
+                    </li>
+                    <li class="nts-nav-item">
+                        <a href="nts-biodata.html" class="nts-nav-link">
+                            <span class="nts-nav-icon">👤</span>
+                            Biodata
+                        </a>
+                    </li>
+                    <li class="nts-nav-item">
+                        <a href="nts-tasks-view.html" class="nts-nav-link active">
+                            <span class="nts-nav-icon">📋</span>
+                            View Assigned Tasks
+                        </a>
+                    </li>
+                    <li class="nts-nav-item">
+                        <a href="nts-tasks-assign.html" class="nts-nav-link">
+                            <span class="nts-nav-icon">➕</span>
+                            Assign Task to Staff
+                        </a>
+                    </li>
+                    <li class="nts-nav-item">
+                        <a href="nts-clubs-sports.html" class="nts-nav-link">
+                            <span class="nts-nav-icon">⚽</span>
+                            Clubs & Sports
+                        </a>
+                    </li>
+                    <li class="nts-nav-item">
+                        <a href="nts-inventory.html" class="nts-nav-link">
+                            <span class="nts-nav-icon">📦</span>
+                            Inventory Management
+                        </a>
+                    </li>
+                    <li class="nts-nav-item">
+                        <a href="nts-scholarships.html" class="nts-nav-link">
+                            <span class="nts-nav-icon">🎓</span>
+                            Scholarships
+                        </a>
+                    </li>
+                    <li class="nts-nav-item">
+                        <a href="nts-leave-view.html" class="nts-nav-link">
+                            <span class="nts-nav-icon">📅</span>
+                            View Remaining Leave Days
+                        </a>
+                    </li>
+                    <li class="nts-nav-item">
+                        <a href="nts-leave-request.html" class="nts-nav-link">
+                            <span class="nts-nav-icon">📝</span>
+                            Request for a Leave
+                        </a>
+                    </li>
+                    <li class="nts-nav-item">
+                        <a href="nts-settings.html" class="nts-nav-link">
+                            <span class="nts-nav-icon">⚙️</span>
+                            Settings
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="nts-main">
+            <!-- Header -->
+            <header class="nts-header">
+                <h1>View Assigned Tasks</h1>
+                <div class="nts-user-info">
+                    <span>Welcome, John Doe</span>
+                    <div class="nts-user-avatar">JD</div>
+                </div>
+            </header>
+
+            <!-- Filter and Search -->
+            <div class="nts-card">
+                <div class="nts-card-header">
+                    <h3>Filter Tasks</h3>
+                </div>
+                <div class="nts-card-body">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 15px; align-items: end;">
+                        <div class="nts-form-group nts-mb-0">
+                            <label class="nts-form-label" for="filter-status">Status</label>
+                            <select id="filter-status" class="nts-form-control">
+                                <option value="">All Status</option>
+                                <option value="pending">Pending</option>
+                                <option value="in-progress">In Progress</option>
+                                <option value="completed">Completed</option>
+                                <option value="overdue">Overdue</option>
+                            </select>
+                        </div>
+                        <div class="nts-form-group nts-mb-0">
+                            <label class="nts-form-label" for="filter-priority">Priority</label>
+                            <select id="filter-priority" class="nts-form-control">
+                                <option value="">All Priorities</option>
+                                <option value="low">Low</option>
+                                <option value="medium">Medium</option>
+                                <option value="high">High</option>
+                                <option value="urgent">Urgent</option>
+                            </select>
+                        </div>
+                        <div class="nts-form-group nts-mb-0">
+                            <label class="nts-form-label" for="filter-department">Department</label>
+                            <select id="filter-department" class="nts-form-control">
+                                <option value="">All Departments</option>
+                                <option value="administration">Administration</option>
+                                <option value="maintenance">Maintenance</option>
+                                <option value="security">Security</option>
+                                <option value="library">Library</option>
+                                <option value="sports">Sports</option>
+                                <option value="canteen">Canteen</option>
+                            </select>
+                        </div>
+                        <button class="nts-btn nts-btn-primary">Apply Filters</button>
+                    </div>
+                    <div class="nts-mt-20">
+                        <input type="text" placeholder="Search tasks..." class="nts-form-control" style="width: 100%;">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Task Statistics -->
+            <div class="nts-stats-grid">
+                <div class="nts-stat-card">
+                    <span class="nts-stat-number">15</span>
+                    <span class="nts-stat-label">Total Tasks</span>
+                </div>
+                <div class="nts-stat-card">
+                    <span class="nts-stat-number">3</span>
+                    <span class="nts-stat-label">Pending</span>
+                </div>
+                <div class="nts-stat-card">
+                    <span class="nts-stat-number">8</span>
+                    <span class="nts-stat-label">In Progress</span>
+                </div>
+                <div class="nts-stat-card">
+                    <span class="nts-stat-number">4</span>
+                    <span class="nts-stat-label">Completed</span>
+                </div>
+            </div>
+
+            <!-- Tasks Table -->
+            <div class="nts-card">
+                <div class="nts-card-header nts-d-flex nts-justify-between nts-align-center">
+                    <h3>Assigned Tasks</h3>
+                    <div>
+                        <button class="nts-btn nts-btn-secondary nts-btn-small">Export to PDF</button>
+                        <button class="nts-btn nts-btn-success nts-btn-small">Export to Excel</button>
+                    </div>
+                </div>
+                <div class="nts-card-body">
+                    <table class="nts-table">
+                        <thead>
+                            <tr>
+                                <th>Task ID</th>
+                                <th>Task Title</th>
+                                <th>Assigned To</th>
+                                <th>Department</th>
+                                <th>Priority</th>
+                                <th>Due Date</th>
+                                <th>Status</th>
+                                <th>Progress</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>TSK001</td>
+                                <td>Library cleaning and maintenance</td>
+                                <td>Michael Smith</td>
+                                <td>Maintenance</td>
+                                <td><span class="nts-badge nts-badge-warning">High</span></td>
+                                <td>2024-01-20</td>
+                                <td><span class="nts-badge nts-badge-primary">In Progress</span></td>
+                                <td>
+                                    <div style="width: 60px; height: 6px; background-color: var(--nts-border); border-radius: 3px; overflow: hidden;">
+                                        <div style="width: 65%; height: 100%; background-color: var(--nts-primary-blue);"></div>
+                                    </div>
+                                    <small>65%</small>
+                                </td>
+                                <td>
+                                    <button class="nts-btn nts-btn-primary nts-btn-small">View</button>
+                                    <button class="nts-btn nts-btn-secondary nts-btn-small">Edit</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>TSK002</td>
+                                <td>Security system check</td>
+                                <td>Sarah Johnson</td>
+                                <td>Security</td>
+                                <td><span class="nts-badge nts-badge-danger">Urgent</span></td>
+                                <td>2024-01-18</td>
+                                <td><span class="nts-badge nts-badge-warning">Pending</span></td>
+                                <td>
+                                    <div style="width: 60px; height: 6px; background-color: var(--nts-border); border-radius: 3px; overflow: hidden;">
+                                        <div style="width: 0%; height: 100%; background-color: var(--nts-primary-blue);"></div>
+                                    </div>
+                                    <small>0%</small>
+                                </td>
+                                <td>
+                                    <button class="nts-btn nts-btn-primary nts-btn-small">View</button>
+                                    <button class="nts-btn nts-btn-warning nts-btn-small">Remind</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>TSK003</td>
+                                <td>Office supply inventory check</td>
+                                <td>Emily Davis</td>
+                                <td>Administration</td>
+                                <td><span class="nts-badge nts-badge-success">Medium</span></td>
+                                <td>2024-01-25</td>
+                                <td><span class="nts-badge nts-badge-success">Completed</span></td>
+                                <td>
+                                    <div style="width: 60px; height: 6px; background-color: var(--nts-border); border-radius: 3px; overflow: hidden;">
+                                        <div style="width: 100%; height: 100%; background-color: var(--nts-success);"></div>
+                                    </div>
+                                    <small>100%</small>
+                                </td>
+                                <td>
+                                    <button class="nts-btn nts-btn-primary nts-btn-small">View</button>
+                                    <button class="nts-btn nts-btn-success nts-btn-small">Report</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>TSK004</td>
+                                <td>Canteen equipment maintenance</td>
+                                <td>Robert Wilson</td>
+                                <td>Canteen</td>
+                                <td><span class="nts-badge nts-badge-secondary">Low</span></td>
+                                <td>2024-01-30</td>
+                                <td><span class="nts-badge nts-badge-primary">In Progress</span></td>
+                                <td>
+                                    <div style="width: 60px; height: 6px; background-color: var(--nts-border); border-radius: 3px; overflow: hidden;">
+                                        <div style="width: 30%; height: 100%; background-color: var(--nts-primary-blue);"></div>
+                                    </div>
+                                    <small>30%</small>
+                                </td>
+                                <td>
+                                    <button class="nts-btn nts-btn-primary nts-btn-small">View</button>
+                                    <button class="nts-btn nts-btn-secondary nts-btn-small">Edit</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>TSK005</td>
+                                <td>Sports equipment inspection</td>
+                                <td>Mark Thompson</td>
+                                <td>Sports</td>
+                                <td><span class="nts-badge nts-badge-success">Medium</span></td>
+                                <td>2024-01-15</td>
+                                <td><span class="nts-badge nts-badge-danger">Overdue</span></td>
+                                <td>
+                                    <div style="width: 60px; height: 6px; background-color: var(--nts-border); border-radius: 3px; overflow: hidden;">
+                                        <div style="width: 85%; height: 100%; background-color: var(--nts-danger);"></div>
+                                    </div>
+                                    <small>85%</small>
+                                </td>
+                                <td>
+                                    <button class="nts-btn nts-btn-primary nts-btn-small">View</button>
+                                    <button class="nts-btn nts-btn-danger nts-btn-small">Urgent</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Task Details Modal (Hidden by default) -->
+            <div id="task-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); z-index: 2000;">
+                <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; border-radius: 8px; padding: 30px; width: 90%; max-width: 600px; max-height: 80vh; overflow-y: auto;">
+                    <div class="nts-d-flex nts-justify-between nts-align-center nts-mb-20">
+                        <h3>Task Details</h3>
+                        <button onclick="closeTaskModal()" style="background: none; border: none; font-size: 24px; cursor: pointer;">&times;</button>
+                    </div>
+                    <div id="task-details-content">
+                        <!-- Task details will be loaded here -->
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/nts-tasks.js"></script>
+</body>
+</html>

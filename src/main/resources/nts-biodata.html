@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biodata - Non-Teaching Staff</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/non-teaching-staff.css">
+</head>
+<body class="nts-body">
+    <div class="nts-layout">
+        <!-- Sidebar -->
+        <aside class="nts-sidebar">
+            <div class="nts-sidebar-header">
+                <h2>Non-Teaching Staff</h2>
+                <p>Management System</p>
+            </div>
+            <nav>
+                <ul class="nts-nav">
+                    <li class="nts-nav-item">
+                        <a href="nts-dashboard.html" class="nts-nav-link">
+                            <span class="nts-nav-icon">📊</span>
+                            Dashboard
+                        </a>
+                    </li>
+                    <li class="nts-nav-item">
+                        <a href="nts-biodata.html" class="nts-nav-link active">
+                            <span class="nts-nav-icon">👤</span>
+                            Biodata
+                        </a>
+                    </li>
+                    <li class="nts-nav-item">
+                        <a href="nts-tasks-view.html" class="nts-nav-link">
+                            <span class="nts-nav-icon">📋</span>
+                            View Assigned Tasks
+                        </a>
+                    </li>
+                    <li class="nts-nav-item">
+                        <a href="nts-tasks-assign.html" class="nts-nav-link">
+                            <span class="nts-nav-icon">➕</span>
+                            Assign Task to Staff
+                        </a>
+                    </li>
+                    <li class="nts-nav-item">
+                        <a href="nts-clubs-sports.html" class="nts-nav-link">
+                            <span class="nts-nav-icon">⚽</span>
+                            Clubs & Sports
+                        </a>
+                    </li>
+                    <li class="nts-nav-item">
+                        <a href="nts-inventory.html" class="nts-nav-link">
+                            <span class="nts-nav-icon">📦</span>
+                            Inventory Management
+                        </a>
+                    </li>
+                    <li class="nts-nav-item">
+                        <a href="nts-scholarships.html" class="nts-nav-link">
+                            <span class="nts-nav-icon">🎓</span>
+                            Scholarships
+                        </a>
+                    </li>
+                    <li class="nts-nav-item">
+                        <a href="nts-leave-view.html" class="nts-nav-link">
+                            <span class="nts-nav-icon">📅</span>
+                            View Remaining Leave Days
+                        </a>
+                    </li>
+                    <li class="nts-nav-item">
+                        <a href="nts-leave-request.html" class="nts-nav-link">
+                            <span class="nts-nav-icon">📝</span>
+                            Request for a Leave
+                        </a>
+                    </li>
+                    <li class="nts-nav-item">
+                        <a href="nts-settings.html" class="nts-nav-link">
+                            <span class="nts-nav-icon">⚙️</span>
+                            Settings
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="nts-main">
+            <!-- Header -->
+            <header class="nts-header">
+                <h1>Biodata</h1>
+                <div class="nts-user-info">
+                    <span>Welcome, John Doe</span>
+                    <div class="nts-user-avatar">JD</div>
+                </div>
+            </header>
+
+            <!-- Profile Information -->
+            <div class="nts-card">
+                <div class="nts-card-header">
+                    <h3>Personal Information</h3>
+                </div>
+                <div class="nts-card-body">
+                    <form id="biodata-form">
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                            <div class="nts-form-group">
+                                <label class="nts-form-label" for="staff-id">Staff ID</label>
+                                <input type="text" id="staff-id" class="nts-form-control" value="NTS001" readonly>
+                            </div>
+                            <div class="nts-form-group">
+                                <label class="nts-form-label" for="emp-code">Employee Code</label>
+                                <input type="text" id="emp-code" class="nts-form-control" value="EMP2024001" readonly>
+                            </div>
+                            <div class="nts-form-group">
+                                <label class="nts-form-label" for="first-name">First Name</label>
+                                <input type="text" id="first-name" class="nts-form-control" value="John" required>
+                            </div>
+                            <div class="nts-form-group">
+                                <label class="nts-form-label" for="last-name">Last Name</label>
+                                <input type="text" id="last-name" class="nts-form-control" value="Doe" required>
+                            </div>
+                            <div class="nts-form-group">
+                                <label class="nts-form-label" for="email">Email Address</label>
+                                <input type="email" id="email" class="nts-form-control" value="john.doe@institution.edu" required>
+                            </div>
+                            <div class="nts-form-group">
+                                <label class="nts-form-label" for="phone">Phone Number</label>
+                                <input type="tel" id="phone" class="nts-form-control" value="+1234567890" required>
+                            </div>
+                            <div class="nts-form-group">
+                                <label class="nts-form-label" for="date-of-birth">Date of Birth</label>
+                                <input type="date" id="date-of-birth" class="nts-form-control" value="1985-06-15" required>
+                            </div>
+                            <div class="nts-form-group">
+                                <label class="nts-form-label" for="gender">Gender</label>
+                                <select id="gender" class="nts-form-control" required>
+                                    <option value="male" selected>Male</option>
+                                    <option value="female">Female</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="nts-form-group">
+                                <label class="nts-form-label" for="department">Department</label>
+                                <select id="department" class="nts-form-control" required>
+                                    <option value="administration" selected>Administration</option>
+                                    <option value="maintenance">Maintenance</option>
+                                    <option value="security">Security</option>
+                                    <option value="library">Library</option>
+                                    <option value="sports">Sports</option>
+                                    <option value="canteen">Canteen</option>
+                                </select>
+                            </div>
+                            <div class="nts-form-group">
+                                <label class="nts-form-label" for="position">Position</label>
+                                <input type="text" id="position" class="nts-form-control" value="Administrative Assistant" required>
+                            </div>
+                            <div class="nts-form-group">
+                                <label class="nts-form-label" for="join-date">Date of Joining</label>
+                                <input type="date" id="join-date" class="nts-form-control" value="2020-03-15" readonly>
+                            </div>
+                            <div class="nts-form-group">
+                                <label class="nts-form-label" for="salary">Monthly Salary</label>
+                                <input type="number" id="salary" class="nts-form-control" value="3500" readonly>
+                            </div>
+                        </div>
+                        
+                        <div class="nts-form-group">
+                            <label class="nts-form-label" for="address">Address</label>
+                            <textarea id="address" class="nts-form-control textarea" rows="3" required>123 Main Street, Cityville, State 12345</textarea>
+                        </div>
+
+                        <div class="nts-form-group">
+                            <label class="nts-form-label" for="emergency-contact">Emergency Contact</label>
+                            <input type="text" id="emergency-contact" class="nts-form-control" value="Jane Doe - +0987654321" required>
+                        </div>
+
+                        <div class="nts-mt-20">
+                            <button type="submit" class="nts-btn nts-btn-primary">Update Information</button>
+                            <button type="button" class="nts-btn nts-btn-secondary" onclick="location.reload()">Reset</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Profile Picture -->
+            <div class="nts-card">
+                <div class="nts-card-header">
+                    <h3>Profile Picture</h3>
+                </div>
+                <div class="nts-card-body">
+                    <div class="nts-d-flex nts-align-center nts-gap-20">
+                        <div style="width: 120px; height: 120px; border-radius: 50%; background-color: var(--nts-primary-blue); color: white; display: flex; align-items: center; justify-content: center; font-size: 3rem; font-weight: bold;">
+                            JD
+                        </div>
+                        <div>
+                            <input type="file" id="profile-picture" accept="image/*" style="margin-bottom: 10px;">
+                            <div>
+                                <button type="button" class="nts-btn nts-btn-primary nts-btn-small">Upload Picture</button>
+                                <button type="button" class="nts-btn nts-btn-danger nts-btn-small">Remove Picture</button>
+                            </div>
+                            <p class="nts-text-muted" style="margin-top: 10px; font-size: 0.8rem;">
+                                Accepted formats: JPG, PNG, GIF. Max size: 2MB
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Employment History -->
+            <div class="nts-card">
+                <div class="nts-card-header">
+                    <h3>Employment History</h3>
+                </div>
+                <div class="nts-card-body">
+                    <table class="nts-table">
+                        <thead>
+                            <tr>
+                                <th>Position</th>
+                                <th>Department</th>
+                                <th>Start Date</th>
+                                <th>End Date</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Administrative Assistant</td>
+                                <td>Administration</td>
+                                <td>2020-03-15</td>
+                                <td>Current</td>
+                                <td><span class="nts-badge nts-badge-success">Active</span></td>
+                            </tr>
+                            <tr>
+                                <td>Office Clerk</td>
+                                <td>Administration</td>
+                                <td>2018-01-10</td>
+                                <td>2020-03-14</td>
+                                <td><span class="nts-badge nts-badge-secondary">Promoted</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Qualifications -->
+            <div class="nts-card">
+                <div class="nts-card-header">
+                    <h3>Qualifications & Certifications</h3>
+                </div>
+                <div class="nts-card-body">
+                    <div id="qualifications-list">
+                        <div class="nts-d-flex nts-justify-between nts-align-center nts-mb-10" style="padding: 10px; border: 1px solid var(--nts-border); border-radius: 6px;">
+                            <div>
+                                <strong>Bachelor of Arts in Business Administration</strong>
+                                <div class="nts-text-muted">State University - 2017</div>
+                            </div>
+                            <button class="nts-btn nts-btn-danger nts-btn-small">Remove</button>
+                        </div>
+                        <div class="nts-d-flex nts-justify-between nts-align-center nts-mb-10" style="padding: 10px; border: 1px solid var(--nts-border); border-radius: 6px;">
+                            <div>
+                                <strong>Microsoft Office Specialist Certification</strong>
+                                <div class="nts-text-muted">Microsoft - 2019</div>
+                            </div>
+                            <button class="nts-btn nts-btn-danger nts-btn-small">Remove</button>
+                        </div>
+                    </div>
+                    
+                    <div class="nts-mt-20">
+                        <h4>Add New Qualification</h4>
+                        <form id="qualification-form">
+                            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 15px; margin-bottom: 15px;">
+                                <input type="text" placeholder="Qualification/Certification" class="nts-form-control" required>
+                                <input type="text" placeholder="Institution/Organization" class="nts-form-control" required>
+                                <input type="text" placeholder="Year" class="nts-form-control" required>
+                            </div>
+                            <button type="submit" class="nts-btn nts-btn-success nts-btn-small">Add Qualification</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/nts-biodata.js"></script>
+</body>
+</html>

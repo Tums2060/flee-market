@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - Non-Teaching Staff</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/non-teaching-staff.css">
+</head>
+<body class="nts-body">
+    <div class="nts-layout">
+        <!-- Sidebar -->
+        <aside class="nts-sidebar">
+            <div class="nts-sidebar-header">
+                <h2>Non-Teaching Staff</h2>
+                <p>Management System</p>
+            </div>
+            <nav>
+                <ul class="nts-nav">
+                    <li class="nts-nav-item">
+                        <a href="nts-dashboard.html" class="nts-nav-link">
+                            <span class="nts-nav-icon">📊</span>
+                            Dashboard
+                        </a>
+                    </li>
+                    <li class="nts-nav-item">
+                        <a href="nts-biodata.html" class="nts-nav-link">
+                            <span class="nts-nav-icon">👤</span>
+                            Biodata
+                        </a>
+                    </li>
+                    <li class="nts-nav-item">
+                        <a href="nts-tasks-view.html" class="nts-nav-link">
+                            <span class="nts-nav-icon">📋</span>
+                            View Assigned Tasks
+                        </a>
+                    </li>
+                    <li class="nts-nav-item">
+                        <a href="nts-tasks-assign.html" class="nts-nav-link">
+                            <span class="nts-nav-icon">➕</span>
+                            Assign Task to Staff
+                        </a>
+                    </li>
+                    <li class="nts-nav-item">
+                        <a href="nts-clubs-sports.html" class="nts-nav-link">
+                            <span class="nts-nav-icon">⚽</span>
+                            Clubs & Sports
+                        </a>
+                    </li>
+                    <li class="nts-nav-item">
+                        <a href="nts-inventory.html" class="nts-nav-link">
+                            <span class="nts-nav-icon">📦</span>
+                            Inventory Management
+                        </a>
+                    </li>
+                    <li class="nts-nav-item">
+                        <a href="nts-scholarships.html" class="nts-nav-link">
+                            <span class="nts-nav-icon">🎓</span>
+                            Scholarships
+                        </a>
+                    </li>
+                    <li class="nts-nav-item">
+                        <a href="nts-leave-view.html" class="nts-nav-link">
+                            <span class="nts-nav-icon">📅</span>
+                            View Remaining Leave Days
+                        </a>
+                    </li>
+                    <li class="nts-nav-item">
+                        <a href="nts-leave-request.html" class="nts-nav-link">
+                            <span class="nts-nav-icon">📝</span>
+                            Request for a Leave
+                        </a>
+                    </li>
+                    <li class="nts-nav-item">
+                        <a href="nts-settings.html" class="nts-nav-link active">
+                            <span class="nts-nav-icon">⚙️</span>
+                            Settings
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="nts-main">
+            <!-- Header -->
+            <header class="nts-header">
+                <h1>Settings</h1>
+                <div class="nts-user-info">
+                    <span>Welcome, John Doe</span>
+                    <div class="nts-user-avatar">JD</div>
+                </div>
+            </header>
+
+            <!-- Account Information -->
+            <div class="nts-card">
+                <div class="nts-card-header">
+                    <h3>Account Information</h3>
+                </div>
+                <div class="nts-card-body">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                        <div class="nts-form-group">
+                            <label class="nts-form-label">Username</label>
+                            <input type="text" class="nts-form-control" value="john.doe" readonly>
+                        </div>
+                        <div class="nts-form-group">
+                            <label class="nts-form-label">Employee ID</label>
+                            <input type="text" class="nts-form-control" value="NTS001" readonly>
+                        </div>
+                        <div class="nts-form-group">
+                            <label class="nts-form-label">Email Address</label>
+                            <input type="email" class="nts-form-control" value="john.doe@institution.edu">
+                        </div>
+                        <div class="nts-form-group">
+                            <label class="nts-form-label">Phone Number</label>
+                            <input type="tel" class="nts-form-control" value="+1234567890">
+                        </div>
+                        <div class="nts-form-group">
+                            <label class="nts-form-label">Department</label>
+                            <input type="text" class="nts-form-control" value="Administration" readonly>
+                        </div>
+                        <div class="nts-form-group">
+                            <label class="nts-form-label">Last Login</label>
+                            <input type="text" class="nts-form-control" value="2024-01-20 09:15 AM" readonly>
+                        </div>
+                    </div>
+                    <div class="nts-mt-20">
+                        <button class="nts-btn nts-btn-primary">Update Contact Information</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Password Reset -->
+            <div class="nts-card">
+                <div class="nts-card-header">
+                    <h3>🔒 Password Management</h3>
+                </div>
+                <div class="nts-card-body">
+                    <form id="password-reset-form">
+                        <div class="nts-alert nts-alert-info">
+                            <strong>Password Requirements:</strong> Must be at least 8 characters long, contain uppercase and lowercase letters, numbers, and special characters.
+                        </div>
+                        
+                        <div class="nts-form-group">
+                            <label class="nts-form-label" for="current-password">Current Password</label>
+                            <input type="password" id="current-password" class="nts-form-control" required>
+                        </div>
+                        
+                        <div class="nts-form-group">
+                            <label class="nts-form-label" for="new-password">New Password</label>
+                            <input type="password" id="new-password" class="nts-form-control" required>
+                            <div id="password-strength" class="nts-mt-10"></div>
+                        </div>
+                        
+                        <div class="nts-form-group">
+                            <label class="nts-form-label" for="confirm-password">Confirm New Password</label>
+                            <input type="password" id="confirm-password" class="nts-form-control" required>
+                        </div>
+                        
+                        <div class="nts-mt-20">
+                            <button type="submit" class="nts-btn nts-btn-primary">Change Password</button>
+                            <button type="button" class="nts-btn nts-btn-secondary" onclick="forgotPassword()">Forgot Password?</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Security Settings -->
+            <div class="nts-card">
+                <div class="nts-card-header">
+                    <h3>🛡️ Security Settings</h3>
+                </div>
+                <div class="nts-card-body">
+                    <div class="nts-form-group">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                            <div>
+                                <h4>Two-Factor Authentication</h4>
+                                <p class="nts-text-muted">Add an extra layer of security to your account</p>
+                            </div>
+                            <label class="switch">
+                                <input type="checkbox" id="two-factor-toggle">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="nts-form-group">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                            <div>
+                                <h4>Login Notifications</h4>
+                                <p class="nts-text-muted">Get notified when someone logs into your account</p>
+                            </div>
+                            <label class="switch">
+                                <input type="checkbox" id="login-notifications" checked>
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="nts-form-group">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                            <div>
+                                <h4>Session Timeout</h4>
+                                <p class="nts-text-muted">Automatically log out after period of inactivity</p>
+                            </div>
+                            <select class="nts-form-control" style="width: 150px;">
+                                <option value="30">30 minutes</option>
+                                <option value="60" selected>1 hour</option>
+                                <option value="120">2 hours</option>
+                                <option value="240">4 hours</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="nts-mt-20">
+                        <button class="nts-btn nts-btn-secondary">View Active Sessions</button>
+                        <button class="nts-btn nts-btn-danger">Log Out All Devices</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Notification Preferences -->
+            <div class="nts-card">
+                <div class="nts-card-header">
+                    <h3>🔔 Notification Preferences</h3>
+                </div>
+                <div class="nts-card-body">
+                    <table class="nts-table">
+                        <thead>
+                            <tr>
+                                <th>Notification Type</th>
+                                <th>Email</th>
+                                <th>SMS</th>
+                                <th>System</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Task Assignments</td>
+                                <td><input type="checkbox" checked></td>
+                                <td><input type="checkbox"></td>
+                                <td><input type="checkbox" checked></td>
+                            </tr>
+                            <tr>
+                                <td>Leave Request Updates</td>
+                                <td><input type="checkbox" checked></td>
+                                <td><input type="checkbox" checked></td>
+                                <td><input type="checkbox" checked></td>
+                            </tr>
+                            <tr>
+                                <td>Inventory Alerts</td>
+                                <td><input type="checkbox" checked></td>
+                                <td><input type="checkbox"></td>
+                                <td><input type="checkbox" checked></td>
+                            </tr>
+                            <tr>
+                                <td>System Maintenance</td>
+                                <td><input type="checkbox" checked></td>
+                                <td><input type="checkbox"></td>
+                                <td><input type="checkbox" checked></td>
+                            </tr>
+                            <tr>
+                                <td>Scholarship Updates</td>
+                                <td><input type="checkbox"></td>
+                                <td><input type="checkbox"></td>
+                                <td><input type="checkbox" checked></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="nts-mt-20">
+                        <button class="nts-btn nts-btn-primary">Save Notification Settings</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Application Preferences -->
+            <div class="nts-card">
+                <div class="nts-card-header">
+                    <h3>🎨 Application Preferences</h3>
+                </div>
+                <div class="nts-card-body">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                        <div class="nts-form-group">
+                            <label class="nts-form-label">Theme</label>
+                            <select class="nts-form-control">
+                                <option value="light" selected>Light</option>
+                                <option value="dark">Dark</option>
+                                <option value="auto">Auto (System)</option>
+                            </select>
+                        </div>
+                        <div class="nts-form-group">
+                            <label class="nts-form-label">Language</label>
+                            <select class="nts-form-control">
+                                <option value="en" selected>English</option>
+                                <option value="es">Spanish</option>
+                                <option value="fr">French</option>
+                                <option value="de">German</option>
+                            </select>
+                        </div>
+                        <div class="nts-form-group">
+                            <label class="nts-form-label">Time Zone</label>
+                            <select class="nts-form-control">
+                                <option value="EST" selected>Eastern Standard Time (EST)</option>
+                                <option value="PST">Pacific Standard Time (PST)</option>
+                                <option value="CST">Central Standard Time (CST)</option>
+                                <option value="MST">Mountain Standard Time (MST)</option>
+                            </select>
+                        </div>
+                        <div class="nts-form-group">
+                            <label class="nts-form-label">Date Format</label>
+                            <select class="nts-form-control">
+                                <option value="MM/DD/YYYY" selected>MM/DD/YYYY</option>
+                                <option value="DD/MM/YYYY">DD/MM/YYYY</option>
+                                <option value="YYYY-MM-DD">YYYY-MM-DD</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="nts-mt-20">
+                        <button class="nts-btn nts-btn-primary">Save Preferences</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Data & Privacy -->
+            <div class="nts-card">
+                <div class="nts-card-header">
+                    <h3>📊 Data & Privacy</h3>
+                </div>
+                <div class="nts-card-body">
+                    <div class="nts-d-flex nts-justify-between nts-align-center nts-mb-20">
+                        <div>
+                            <h4>Download Your Data</h4>
+                            <p class="nts-text-muted">Export your personal data and activity history</p>
+                        </div>
+                        <button class="nts-btn nts-btn-secondary">Export Data</button>
+                    </div>
+                    
+                    <div class="nts-d-flex nts-justify-between nts-align-center nts-mb-20">
+                        <div>
+                            <h4>Activity Log</h4>
+                            <p class="nts-text-muted">View your recent system activity</p>
+                        </div>
+                        <button class="nts-btn nts-btn-secondary">View Activity</button>
+                    </div>
+                    
+                    <div class="nts-d-flex nts-justify-between nts-align-center nts-mb-20">
+                        <div>
+                            <h4>Privacy Policy</h4>
+                            <p class="nts-text-muted">Review how we handle your data</p>
+                        </div>
+                        <button class="nts-btn nts-btn-secondary">Read Policy</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- System Information -->
+            <div class="nts-card">
+                <div class="nts-card-header">
+                    <h3>ℹ️ System Information</h3>
+                </div>
+                <div class="nts-card-body">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                        <div>
+                            <strong>Application Version:</strong> v2.1.0
+                        </div>
+                        <div>
+                            <strong>Last Update:</strong> January 15, 2024
+                        </div>
+                        <div>
+                            <strong>Server Status:</strong> <span class="nts-badge nts-badge-success">Online</span>
+                        </div>
+                        <div>
+                            <strong>Maintenance Window:</strong> Sundays 2:00-4:00 AM
+                        </div>
+                    </div>
+                    <div class="nts-mt-20">
+                        <button class="nts-btn nts-btn-secondary">Check for Updates</button>
+                        <button class="nts-btn nts-btn-secondary">Report Issue</button>
+                        <button class="nts-btn nts-btn-secondary">Contact Support</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Danger Zone -->
+            <div class="nts-card" style="border-color: var(--nts-danger);">
+                <div class="nts-card-header" style="background-color: #f8d7da; border-color: var(--nts-danger);">
+                    <h3 style="color: var(--nts-danger);">⚠️ Danger Zone</h3>
+                </div>
+                <div class="nts-card-body">
+                    <div class="nts-alert nts-alert-danger">
+                        <strong>Warning:</strong> These actions are permanent and cannot be undone. Please proceed with caution.
+                    </div>
+                    <div class="nts-d-flex nts-justify-between nts-align-center nts-mb-20">
+                        <div>
+                            <h4>Deactivate Account</h4>
+                            <p class="nts-text-muted">Temporarily disable your account access</p>
+                        </div>
+                        <button class="nts-btn nts-btn-warning">Deactivate</button>
+                    </div>
+                    <div class="nts-d-flex nts-justify-between nts-align-center">
+                        <div>
+                            <h4>Delete Account</h4>
+                            <p class="nts-text-muted">Permanently delete your account and all data</p>
+                        </div>
+                        <button class="nts-btn nts-btn-danger">Delete Account</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <style>
+        /* Toggle Switch Styles */
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
+
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 34px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+
+        input:checked + .slider {
+            background-color: var(--nts-primary-blue);
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(26px);
+        }
+    </style>
+
+    <script src="js/main.js"></script>
+    <script src="js/nts-settings.js"></script>
+</body>
+</html>

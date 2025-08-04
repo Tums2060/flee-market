@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clubs & Sports - Non-Teaching Staff</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/non-teaching-staff.css">
+</head>
+<body class="nts-body">
+    <div class="nts-layout">
+        <!-- Sidebar -->
+        <aside class="nts-sidebar">
+            <div class="nts-sidebar-header">
+                <h2>Non-Teaching Staff</h2>
+                <p>Management System</p>
+            </div>
+            <nav>
+                <ul class="nts-nav">
+                    <li class="nts-nav-item">
+                        <a href="nts-dashboard.html" class="nts-nav-link">
+                            <span class="nts-nav-icon">📊</span>
+                            Dashboard
+                        </a>
+                    </li>
+                    <li class="nts-nav-item">
+                        <a href="nts-biodata.html" class="nts-nav-link">
+                            <span class="nts-nav-icon">👤</span>
+                            Biodata
+                        </a>
+                    </li>
+                    <li class="nts-nav-item">
+                        <a href="nts-tasks-view.html" class="nts-nav-link">
+                            <span class="nts-nav-icon">📋</span>
+                            View Assigned Tasks
+                        </a>
+                    </li>
+                    <li class="nts-nav-item">
+                        <a href="nts-tasks-assign.html" class="nts-nav-link">
+                            <span class="nts-nav-icon">➕</span>
+                            Assign Task to Staff
+                        </a>
+                    </li>
+                    <li class="nts-nav-item">
+                        <a href="nts-clubs-sports.html" class="nts-nav-link active">
+                            <span class="nts-nav-icon">⚽</span>
+                            Clubs & Sports
+                        </a>
+                    </li>
+                    <li class="nts-nav-item">
+                        <a href="nts-inventory.html" class="nts-nav-link">
+                            <span class="nts-nav-icon">📦</span>
+                            Inventory Management
+                        </a>
+                    </li>
+                    <li class="nts-nav-item">
+                        <a href="nts-scholarships.html" class="nts-nav-link">
+                            <span class="nts-nav-icon">🎓</span>
+                            Scholarships
+                        </a>
+                    </li>
+                    <li class="nts-nav-item">
+                        <a href="nts-leave-view.html" class="nts-nav-link">
+                            <span class="nts-nav-icon">📅</span>
+                            View Remaining Leave Days
+                        </a>
+                    </li>
+                    <li class="nts-nav-item">
+                        <a href="nts-leave-request.html" class="nts-nav-link">
+                            <span class="nts-nav-icon">📝</span>
+                            Request for a Leave
+                        </a>
+                    </li>
+                    <li class="nts-nav-item">
+                        <a href="nts-settings.html" class="nts-nav-link">
+                            <span class="nts-nav-icon">⚙️</span>
+                            Settings
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="nts-main">
+            <!-- Header -->
+            <header class="nts-header">
+                <h1>Clubs & Sports Management</h1>
+                <div class="nts-user-info">
+                    <span>Welcome, John Doe</span>
+                    <div class="nts-user-avatar">JD</div>
+                </div>
+            </header>
+
+            <!-- Sports Statistics -->
+            <div class="nts-stats-grid">
+                <div class="nts-stat-card">
+                    <span class="nts-stat-number">12</span>
+                    <span class="nts-stat-label">Active Clubs</span>
+                </div>
+                <div class="nts-stat-card">
+                    <span class="nts-stat-number">8</span>
+                    <span class="nts-stat-label">Sports Teams</span>
+                </div>
+                <div class="nts-stat-card">
+                    <span class="nts-stat-number">245</span>
+                    <span class="nts-stat-label">Total Members</span>
+                </div>
+                <div class="nts-stat-card">
+                    <span class="nts-stat-number">5</span>
+                    <span class="nts-stat-label">Upcoming Events</span>
+                </div>
+            </div>
+
+            <!-- Active Clubs -->
+            <div class="nts-card">
+                <div class="nts-card-header nts-d-flex nts-justify-between nts-align-center">
+                    <h3>Active Clubs</h3>
+                    <button class="nts-btn nts-btn-primary">Add New Club</button>
+                </div>
+                <div class="nts-card-body">
+                    <table class="nts-table">
+                        <thead>
+                            <tr>
+                                <th>Club Name</th>
+                                <th>Category</th>
+                                <th>Members</th>
+                                <th>Coordinator</th>
+                                <th>Meeting Schedule</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Football Club</td>
+                                <td>Sports</td>
+                                <td>35</td>
+                                <td>Coach Mike Smith</td>
+                                <td>Mon, Wed, Fri 4-6 PM</td>
+                                <td><span class="nts-badge nts-badge-success">Active</span></td>
+                                <td>
+                                    <button class="nts-btn nts-btn-primary nts-btn-small">View</button>
+                                    <button class="nts-btn nts-btn-secondary nts-btn-small">Edit</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Basketball Club</td>
+                                <td>Sports</td>
+                                <td>28</td>
+                                <td>Coach Sarah Wilson</td>
+                                <td>Tue, Thu 5-7 PM</td>
+                                <td><span class="nts-badge nts-badge-success">Active</span></td>
+                                <td>
+                                    <button class="nts-btn nts-btn-primary nts-btn-small">View</button>
+                                    <button class="nts-btn nts-btn-secondary nts-btn-small">Edit</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Drama Club</td>
+                                <td>Arts</td>
+                                <td>22</td>
+                                <td>Ms. Emily Johnson</td>
+                                <td>Wed, Fri 3-5 PM</td>
+                                <td><span class="nts-badge nts-badge-success">Active</span></td>
+                                <td>
+                                    <button class="nts-btn nts-btn-primary nts-btn-small">View</button>
+                                    <button class="nts-btn nts-btn-secondary nts-btn-small">Edit</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Chess Club</td>
+                                <td>Intellectual</td>
+                                <td>18</td>
+                                <td>Mr. Robert Davis</td>
+                                <td>Thu 4-6 PM</td>
+                                <td><span class="nts-badge nts-badge-warning">Inactive</span></td>
+                                <td>
+                                    <button class="nts-btn nts-btn-primary nts-btn-small">View</button>
+                                    <button class="nts-btn nts-btn-warning nts-btn-small">Activate</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Sports Equipment Management -->
+            <div class="nts-card">
+                <div class="nts-card-header nts-d-flex nts-justify-between nts-align-center">
+                    <h3>Sports Equipment Inventory</h3>
+                    <button class="nts-btn nts-btn-primary">Add Equipment</button>
+                </div>
+                <div class="nts-card-body">
+                    <table class="nts-table">
+                        <thead>
+                            <tr>
+                                <th>Equipment</th>
+                                <th>Sport/Club</th>
+                                <th>Quantity</th>
+                                <th>Condition</th>
+                                <th>Last Maintenance</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Football</td>
+                                <td>Football Club</td>
+                                <td>15</td>
+                                <td><span class="nts-badge nts-badge-success">Good</span></td>
+                                <td>2024-01-10</td>
+                                <td><span class="nts-badge nts-badge-success">Available</span></td>
+                                <td>
+                                    <button class="nts-btn nts-btn-primary nts-btn-small">View</button>
+                                    <button class="nts-btn nts-btn-secondary nts-btn-small">Maintain</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Basketball</td>
+                                <td>Basketball Club</td>
+                                <td>10</td>
+                                <td><span class="nts-badge nts-badge-warning">Fair</span></td>
+                                <td>2024-01-05</td>
+                                <td><span class="nts-badge nts-badge-success">Available</span></td>
+                                <td>
+                                    <button class="nts-btn nts-btn-primary nts-btn-small">View</button>
+                                    <button class="nts-btn nts-btn-warning nts-btn-small">Replace</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Tennis Rackets</td>
+                                <td>Tennis Club</td>
+                                <td>8</td>
+                                <td><span class="nts-badge nts-badge-danger">Poor</span></td>
+                                <td>2023-12-15</td>
+                                <td><span class="nts-badge nts-badge-danger">Needs Repair</span></td>
+                                <td>
+                                    <button class="nts-btn nts-btn-primary nts-btn-small">View</button>
+                                    <button class="nts-btn nts-btn-danger nts-btn-small">Repair</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Upcoming Events -->
+            <div class="nts-card">
+                <div class="nts-card-header nts-d-flex nts-justify-between nts-align-center">
+                    <h3>Upcoming Events & Competitions</h3>
+                    <button class="nts-btn nts-btn-primary">Schedule Event</button>
+                </div>
+                <div class="nts-card-body">
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+                        <div style="border: 1px solid var(--nts-border); border-radius: 8px; padding: 20px;">
+                            <h4>Inter-School Football Tournament</h4>
+                            <p><strong>Date:</strong> January 25, 2024</p>
+                            <p><strong>Time:</strong> 2:00 PM - 6:00 PM</p>
+                            <p><strong>Venue:</strong> Main Football Ground</p>
+                            <p><strong>Participants:</strong> 4 Teams</p>
+                            <div class="nts-mt-20">
+                                <span class="nts-badge nts-badge-primary">Upcoming</span>
+                                <button class="nts-btn nts-btn-secondary nts-btn-small">Manage</button>
+                            </div>
+                        </div>
+                        <div style="border: 1px solid var(--nts-border); border-radius: 8px; padding: 20px;">
+                            <h4>Basketball Championship</h4>
+                            <p><strong>Date:</strong> February 5, 2024</p>
+                            <p><strong>Time:</strong> 10:00 AM - 4:00 PM</p>
+                            <p><strong>Venue:</strong> Indoor Basketball Court</p>
+                            <p><strong>Participants:</strong> 6 Teams</p>
+                            <div class="nts-mt-20">
+                                <span class="nts-badge nts-badge-warning">Planning</span>
+                                <button class="nts-btn nts-btn-secondary nts-btn-small">Manage</button>
+                            </div>
+                        </div>
+                        <div style="border: 1px solid var(--nts-border); border-radius: 8px; padding: 20px;">
+                            <h4>Annual Drama Performance</h4>
+                            <p><strong>Date:</strong> February 14, 2024</p>
+                            <p><strong>Time:</strong> 7:00 PM - 9:00 PM</p>
+                            <p><strong>Venue:</strong> Main Auditorium</p>
+                            <p><strong>Participants:</strong> Drama Club Members</p>
+                            <div class="nts-mt-20">
+                                <span class="nts-badge nts-badge-success">Confirmed</span>
+                                <button class="nts-btn nts-btn-secondary nts-btn-small">Manage</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Club Registration Requests -->
+            <div class="nts-card">
+                <div class="nts-card-header">
+                    <h3>Pending Club Registration Requests</h3>
+                </div>
+                <div class="nts-card-body">
+                    <table class="nts-table">
+                        <thead>
+                            <tr>
+                                <th>Club Name</th>
+                                <th>Requested By</th>
+                                <th>Category</th>
+                                <th>Expected Members</th>
+                                <th>Request Date</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Photography Club</td>
+                                <td>Alex Johnson</td>
+                                <td>Arts</td>
+                                <td>15</td>
+                                <td>2024-01-12</td>
+                                <td><span class="nts-badge nts-badge-warning">Under Review</span></td>
+                                <td>
+                                    <button class="nts-btn nts-btn-success nts-btn-small">Approve</button>
+                                    <button class="nts-btn nts-btn-danger nts-btn-small">Reject</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Coding Club</td>
+                                <td>Maria Rodriguez</td>
+                                <td>Technology</td>
+                                <td>20</td>
+                                <td>2024-01-10</td>
+                                <td><span class="nts-badge nts-badge-warning">Under Review</span></td>
+                                <td>
+                                    <button class="nts-btn nts-btn-success nts-btn-small">Approve</button>
+                                    <button class="nts-btn nts-btn-danger nts-btn-small">Reject</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/nts-clubs-sports.js"></script>
+</body>
+</html>

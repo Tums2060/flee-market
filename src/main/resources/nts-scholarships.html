@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scholarships - Non-Teaching Staff</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/non-teaching-staff.css">
+</head>
+<body class="nts-body">
+    <div class="nts-layout">
+        <!-- Sidebar -->
+        <aside class="nts-sidebar">
+            <div class="nts-sidebar-header">
+                <h2>Non-Teaching Staff</h2>
+                <p>Management System</p>
+            </div>
+            <nav>
+                <ul class="nts-nav">
+                    <li class="nts-nav-item">
+                        <a href="nts-dashboard.html" class="nts-nav-link">
+                            <span class="nts-nav-icon">📊</span>
+                            Dashboard
+                        </a>
+                    </li>
+                    <li class="nts-nav-item">
+                        <a href="nts-biodata.html" class="nts-nav-link">
+                            <span class="nts-nav-icon">👤</span>
+                            Biodata
+                        </a>
+                    </li>
+                    <li class="nts-nav-item">
+                        <a href="nts-tasks-view.html" class="nts-nav-link">
+                            <span class="nts-nav-icon">📋</span>
+                            View Assigned Tasks
+                        </a>
+                    </li>
+                    <li class="nts-nav-item">
+                        <a href="nts-tasks-assign.html" class="nts-nav-link">
+                            <span class="nts-nav-icon">➕</span>
+                            Assign Task to Staff
+                        </a>
+                    </li>
+                    <li class="nts-nav-item">
+                        <a href="nts-clubs-sports.html" class="nts-nav-link">
+                            <span class="nts-nav-icon">⚽</span>
+                            Clubs & Sports
+                        </a>
+                    </li>
+                    <li class="nts-nav-item">
+                        <a href="nts-inventory.html" class="nts-nav-link">
+                            <span class="nts-nav-icon">📦</span>
+                            Inventory Management
+                        </a>
+                    </li>
+                    <li class="nts-nav-item">
+                        <a href="nts-scholarships.html" class="nts-nav-link active">
+                            <span class="nts-nav-icon">🎓</span>
+                            Scholarships
+                        </a>
+                    </li>
+                    <li class="nts-nav-item">
+                        <a href="nts-leave-view.html" class="nts-nav-link">
+                            <span class="nts-nav-icon">📅</span>
+                            View Remaining Leave Days
+                        </a>
+                    </li>
+                    <li class="nts-nav-item">
+                        <a href="nts-leave-request.html" class="nts-nav-link">
+                            <span class="nts-nav-icon">📝</span>
+                            Request for a Leave
+                        </a>
+                    </li>
+                    <li class="nts-nav-item">
+                        <a href="nts-settings.html" class="nts-nav-link">
+                            <span class="nts-nav-icon">⚙️</span>
+                            Settings
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="nts-main">
+            <!-- Header -->
+            <header class="nts-header">
+                <h1>Scholarships Management</h1>
+                <div class="nts-user-info">
+                    <span>Welcome, John Doe</span>
+                    <div class="nts-user-avatar">JD</div>
+                </div>
+            </header>
+
+            <!-- Scholarship Statistics -->
+            <div class="nts-stats-grid">
+                <div class="nts-stat-card">
+                    <span class="nts-stat-number">156</span>
+                    <span class="nts-stat-label">Total Recipients</span>
+                </div>
+                <div class="nts-stat-card">
+                    <span class="nts-stat-number">23</span>
+                    <span class="nts-stat-label">Pending Applications</span>
+                </div>
+                <div class="nts-stat-card">
+                    <span class="nts-stat-number">$125,000</span>
+                    <span class="nts-stat-label">Total Disbursed</span>
+                </div>
+                <div class="nts-stat-card">
+                    <span class="nts-stat-number">8</span>
+                    <span class="nts-stat-label">Active Programs</span>
+                </div>
+            </div>
+
+            <!-- Quick Actions -->
+            <div class="nts-card">
+                <div class="nts-card-header">
+                    <h3>Quick Actions</h3>
+                </div>
+                <div class="nts-card-body">
+                    <div class="nts-d-flex nts-gap-10">
+                        <button class="nts-btn nts-btn-primary">Add New Scholarship</button>
+                        <button class="nts-btn nts-btn-success">Process Applications</button>
+                        <button class="nts-btn nts-btn-warning">Generate Report</button>
+                        <button class="nts-btn nts-btn-secondary">Export Data</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pending Applications -->
+            <div class="nts-card">
+                <div class="nts-card-header">
+                    <h3>Pending Scholarship Applications</h3>
+                </div>
+                <div class="nts-card-body">
+                    <table class="nts-table">
+                        <thead>
+                            <tr>
+                                <th>Application ID</th>
+                                <th>Student Name</th>
+                                <th>Student ID</th>
+                                <th>Scholarship Type</th>
+                                <th>Amount</th>
+                                <th>Submit Date</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>APP001</td>
+                                <td>Alice Johnson</td>
+                                <td>STU2024001</td>
+                                <td>Merit Scholarship</td>
+                                <td>$2,500</td>
+                                <td>2024-01-10</td>
+                                <td><span class="nts-badge nts-badge-warning">Under Review</span></td>
+                                <td>
+                                    <button class="nts-btn nts-btn-primary nts-btn-small">Review</button>
+                                    <button class="nts-btn nts-btn-success nts-btn-small">Approve</button>
+                                    <button class="nts-btn nts-btn-danger nts-btn-small">Reject</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>APP002</td>
+                                <td>Michael Brown</td>
+                                <td>STU2024002</td>
+                                <td>Need-Based Aid</td>
+                                <td>$1,800</td>
+                                <td>2024-01-12</td>
+                                <td><span class="nts-badge nts-badge-primary">Verification</span></td>
+                                <td>
+                                    <button class="nts-btn nts-btn-primary nts-btn-small">Review</button>
+                                    <button class="nts-btn nts-btn-warning nts-btn-small">Request Info</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>APP003</td>
+                                <td>Sarah Davis</td>
+                                <td>STU2024003</td>
+                                <td>Sports Scholarship</td>
+                                <td>$3,000</td>
+                                <td>2024-01-08</td>
+                                <td><span class="nts-badge nts-badge-success">Approved</span></td>
+                                <td>
+                                    <button class="nts-btn nts-btn-primary nts-btn-small">View</button>
+                                    <button class="nts-btn nts-btn-success nts-btn-small">Disburse</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Available Scholarships -->
+            <div class="nts-card">
+                <div class="nts-card-header nts-d-flex nts-justify-between nts-align-center">
+                    <h3>Available Scholarship Programs</h3>
+                    <button class="nts-btn nts-btn-primary">Add New Program</button>
+                </div>
+                <div class="nts-card-body">
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 20px;">
+                        <div style="border: 1px solid var(--nts-border); border-radius: 8px; padding: 20px;">
+                            <h4>Merit Scholarship</h4>
+                            <p><strong>Amount:</strong> $2,500 per semester</p>
+                            <p><strong>Eligibility:</strong> GPA 3.5 or higher</p>
+                            <p><strong>Recipients:</strong> 45 students</p>
+                            <p><strong>Budget Remaining:</strong> $25,000</p>
+                            <div class="nts-mt-20">
+                                <span class="nts-badge nts-badge-success">Active</span>
+                                <button class="nts-btn nts-btn-secondary nts-btn-small">Manage</button>
+                            </div>
+                        </div>
+                        <div style="border: 1px solid var(--nts-border); border-radius: 8px; padding: 20px;">
+                            <h4>Need-Based Financial Aid</h4>
+                            <p><strong>Amount:</strong> $1,500 - $3,000</p>
+                            <p><strong>Eligibility:</strong> Financial need assessment</p>
+                            <p><strong>Recipients:</strong> 67 students</p>
+                            <p><strong>Budget Remaining:</strong> $45,000</p>
+                            <div class="nts-mt-20">
+                                <span class="nts-badge nts-badge-success">Active</span>
+                                <button class="nts-btn nts-btn-secondary nts-btn-small">Manage</button>
+                            </div>
+                        </div>
+                        <div style="border: 1px solid var(--nts-border); border-radius: 8px; padding: 20px;">
+                            <h4>Sports Excellence Scholarship</h4>
+                            <p><strong>Amount:</strong> $3,000 per semester</p>
+                            <p><strong>Eligibility:</strong> Outstanding sports performance</p>
+                            <p><strong>Recipients:</strong> 18 students</p>
+                            <p><strong>Budget Remaining:</strong> $15,000</p>
+                            <div class="nts-mt-20">
+                                <span class="nts-badge nts-badge-success">Active</span>
+                                <button class="nts-btn nts-btn-secondary nts-btn-small">Manage</button>
+                            </div>
+                        </div>
+                        <div style="border: 1px solid var(--nts-border); border-radius: 8px; padding: 20px;">
+                            <h4>Community Service Award</h4>
+                            <p><strong>Amount:</strong> $1,000 per semester</p>
+                            <p><strong>Eligibility:</strong> 100+ volunteer hours</p>
+                            <p><strong>Recipients:</strong> 26 students</p>
+                            <p><strong>Budget Remaining:</strong> $8,000</p>
+                            <div class="nts-mt-20">
+                                <span class="nts-badge nts-badge-success">Active</span>
+                                <button class="nts-btn nts-btn-secondary nts-btn-small">Manage</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Current Recipients -->
+            <div class="nts-card">
+                <div class="nts-card-header nts-d-flex nts-justify-between nts-align-center">
+                    <h3>Current Scholarship Recipients</h3>
+                    <div>
+                        <input type="text" placeholder="Search recipients..." class="nts-form-control" style="width: 250px; display: inline-block;">
+                        <button class="nts-btn nts-btn-secondary nts-btn-small">Search</button>
+                    </div>
+                </div>
+                <div class="nts-card-body">
+                    <table class="nts-table">
+                        <thead>
+                            <tr>
+                                <th>Student ID</th>
+                                <th>Student Name</th>
+                                <th>Program</th>
+                                <th>Scholarship Type</th>
+                                <th>Amount/Semester</th>
+                                <th>Start Date</th>
+                                <th>GPA</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>STU2023001</td>
+                                <td>Emma Wilson</td>
+                                <td>Computer Science</td>
+                                <td>Merit Scholarship</td>
+                                <td>$2,500</td>
+                                <td>2023-09-01</td>
+                                <td>3.8</td>
+                                <td><span class="nts-badge nts-badge-success">Active</span></td>
+                                <td>
+                                    <button class="nts-btn nts-btn-primary nts-btn-small">View</button>
+                                    <button class="nts-btn nts-btn-secondary nts-btn-small">Review</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>STU2023002</td>
+                                <td>James Rodriguez</td>
+                                <td>Business Administration</td>
+                                <td>Need-Based Aid</td>
+                                <td>$2,000</td>
+                                <td>2023-09-01</td>
+                                <td>3.2</td>
+                                <td><span class="nts-badge nts-badge-success">Active</span></td>
+                                <td>
+                                    <button class="nts-btn nts-btn-primary nts-btn-small">View</button>
+                                    <button class="nts-btn nts-btn-secondary nts-btn-small">Review</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>STU2023003</td>
+                                <td>Lisa Chen</td>
+                                <td>Engineering</td>
+                                <td>Sports Scholarship</td>
+                                <td>$3,000</td>
+                                <td>2023-09-01</td>
+                                <td>3.6</td>
+                                <td><span class="nts-badge nts-badge-warning">Under Review</span></td>
+                                <td>
+                                    <button class="nts-btn nts-btn-primary nts-btn-small">View</button>
+                                    <button class="nts-btn nts-btn-warning nts-btn-small">Review GPA</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>STU2023004</td>
+                                <td>David Thompson</td>
+                                <td>Psychology</td>
+                                <td>Community Service</td>
+                                <td>$1,000</td>
+                                <td>2023-09-01</td>
+                                <td>3.4</td>
+                                <td><span class="nts-badge nts-badge-success">Active</span></td>
+                                <td>
+                                    <button class="nts-btn nts-btn-primary nts-btn-small">View</button>
+                                    <button class="nts-btn nts-btn-secondary nts-btn-small">Review</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Recent Disbursements -->
+            <div class="nts-card">
+                <div class="nts-card-header">
+                    <h3>Recent Disbursements</h3>
+                </div>
+                <div class="nts-card-body">
+                    <table class="nts-table">
+                        <thead>
+                            <tr>
+                                <th>Transaction ID</th>
+                                <th>Student Name</th>
+                                <th>Scholarship Type</th>
+                                <th>Amount</th>
+                                <th>Disbursement Date</th>
+                                <th>Status</th>
+                                <th>Processed By</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>TXN2024001</td>
+                                <td>Emma Wilson</td>
+                                <td>Merit Scholarship</td>
+                                <td>$2,500</td>
+                                <td>2024-01-15</td>
+                                <td><span class="nts-badge nts-badge-success">Completed</span></td>
+                                <td>John Doe</td>
+                            </tr>
+                            <tr>
+                                <td>TXN2024002</td>
+                                <td>James Rodriguez</td>
+                                <td>Need-Based Aid</td>
+                                <td>$2,000</td>
+                                <td>2024-01-15</td>
+                                <td><span class="nts-badge nts-badge-success">Completed</span></td>
+                                <td>John Doe</td>
+                            </tr>
+                            <tr>
+                                <td>TXN2024003</td>
+                                <td>David Thompson</td>
+                                <td>Community Service</td>
+                                <td>$1,000</td>
+                                <td>2024-01-14</td>
+                                <td><span class="nts-badge nts-badge-warning">Pending</span></td>
+                                <td>John Doe</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/nts-scholarships.js"></script>
+</body>
+</html>

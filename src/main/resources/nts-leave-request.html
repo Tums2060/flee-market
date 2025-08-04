@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request for a Leave - Non-Teaching Staff</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/non-teaching-staff.css">
+</head>
+<body class="nts-body">
+    <div class="nts-layout">
+        <!-- Sidebar -->
+        <aside class="nts-sidebar">
+            <div class="nts-sidebar-header">
+                <h2>Non-Teaching Staff</h2>
+                <p>Management System</p>
+            </div>
+            <nav>
+                <ul class="nts-nav">
+                    <li class="nts-nav-item">
+                        <a href="nts-dashboard.html" class="nts-nav-link">
+                            <span class="nts-nav-icon">📊</span>
+                            Dashboard
+                        </a>
+                    </li>
+                    <li class="nts-nav-item">
+                        <a href="nts-biodata.html" class="nts-nav-link">
+                            <span class="nts-nav-icon">👤</span>
+                            Biodata
+                        </a>
+                    </li>
+                    <li class="nts-nav-item">
+                        <a href="nts-tasks-view.html" class="nts-nav-link">
+                            <span class="nts-nav-icon">📋</span>
+                            View Assigned Tasks
+                        </a>
+                    </li>
+                    <li class="nts-nav-item">
+                        <a href="nts-tasks-assign.html" class="nts-nav-link">
+                            <span class="nts-nav-icon">➕</span>
+                            Assign Task to Staff
+                        </a>
+                    </li>
+                    <li class="nts-nav-item">
+                        <a href="nts-clubs-sports.html" class="nts-nav-link">
+                            <span class="nts-nav-icon">⚽</span>
+                            Clubs & Sports
+                        </a>
+                    </li>
+                    <li class="nts-nav-item">
+                        <a href="nts-inventory.html" class="nts-nav-link">
+                            <span class="nts-nav-icon">📦</span>
+                            Inventory Management
+                        </a>
+                    </li>
+                    <li class="nts-nav-item">
+                        <a href="nts-scholarships.html" class="nts-nav-link">
+                            <span class="nts-nav-icon">🎓</span>
+                            Scholarships
+                        </a>
+                    </li>
+                    <li class="nts-nav-item">
+                        <a href="nts-leave-view.html" class="nts-nav-link">
+                            <span class="nts-nav-icon">📅</span>
+                            View Remaining Leave Days
+                        </a>
+                    </li>
+                    <li class="nts-nav-item">
+                        <a href="nts-leave-request.html" class="nts-nav-link active">
+                            <span class="nts-nav-icon">📝</span>
+                            Request for a Leave
+                        </a>
+                    </li>
+                    <li class="nts-nav-item">
+                        <a href="nts-settings.html" class="nts-nav-link">
+                            <span class="nts-nav-icon">⚙️</span>
+                            Settings
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="nts-main">
+            <!-- Header -->
+            <header class="nts-header">
+                <h1>Request for a Leave</h1>
+                <div class="nts-user-info">
+                    <span>Welcome, John Doe</span>
+                    <div class="nts-user-avatar">JD</div>
+                </div>
+            </header>
+
+            <!-- Leave Balance Summary -->
+            <div class="nts-card">
+                <div class="nts-card-header">
+                    <h3>Your Leave Balance</h3>
+                </div>
+                <div class="nts-card-body">
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px;">
+                        <div style="text-align: center; padding: 15px; border: 1px solid var(--nts-border); border-radius: 6px;">
+                            <h4>Annual Leave</h4>
+                            <span style="font-size: 2rem; color: var(--nts-primary-blue); font-weight: bold;">25</span>
+                            <p class="nts-text-muted">days remaining</p>
+                        </div>
+                        <div style="text-align: center; padding: 15px; border: 1px solid var(--nts-border); border-radius: 6px;">
+                            <h4>Sick Leave</h4>
+                            <span style="font-size: 2rem; color: var(--nts-success); font-weight: bold;">8</span>
+                            <p class="nts-text-muted">days remaining</p>
+                        </div>
+                        <div style="text-align: center; padding: 15px; border: 1px solid var(--nts-border); border-radius: 6px;">
+                            <h4>Personal Days</h4>
+                            <span style="font-size: 2rem; color: var(--nts-warning); font-weight: bold;">3</span>
+                            <p class="nts-text-muted">days remaining</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Leave Request Form -->
+            <div class="nts-card">
+                <div class="nts-card-header">
+                    <h3>Submit Leave Request</h3>
+                </div>
+                <div class="nts-card-body">
+                    <form id="leave-request-form">
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                            <div class="nts-form-group">
+                                <label class="nts-form-label" for="leave-type">Leave Type</label>
+                                <select id="leave-type" class="nts-form-control" required>
+                                    <option value="">Select Leave Type</option>
+                                    <option value="annual">Annual Leave</option>
+                                    <option value="sick">Sick Leave</option>
+                                    <option value="personal">Personal Day</option>
+                                    <option value="maternity">Maternity Leave</option>
+                                    <option value="paternity">Paternity Leave</option>
+                                    <option value="compassionate">Compassionate Leave</option>
+                                    <option value="study">Study Leave</option>
+                                    <option value="unpaid">Unpaid Leave</option>
+                                </select>
+                            </div>
+                            <div class="nts-form-group">
+                                <label class="nts-form-label" for="duration-type">Duration Type</label>
+                                <select id="duration-type" class="nts-form-control" required>
+                                    <option value="">Select Duration</option>
+                                    <option value="full-day">Full Day(s)</option>
+                                    <option value="half-day-morning">Half Day - Morning</option>
+                                    <option value="half-day-afternoon">Half Day - Afternoon</option>
+                                    <option value="hourly">Hourly</option>
+                                </select>
+                            </div>
+                            <div class="nts-form-group">
+                                <label class="nts-form-label" for="start-date">Start Date</label>
+                                <input type="date" id="start-date" class="nts-form-control" required>
+                            </div>
+                            <div class="nts-form-group">
+                                <label class="nts-form-label" for="end-date">End Date</label>
+                                <input type="date" id="end-date" class="nts-form-control" required>
+                            </div>
+                            <div class="nts-form-group">
+                                <label class="nts-form-label" for="total-days">Total Days</label>
+                                <input type="number" id="total-days" class="nts-form-control" readonly placeholder="Auto-calculated">
+                            </div>
+                            <div class="nts-form-group">
+                                <label class="nts-form-label" for="return-date">Expected Return Date</label>
+                                <input type="date" id="return-date" class="nts-form-control" readonly>
+                            </div>
+                        </div>
+
+                        <div class="nts-form-group">
+                            <label class="nts-form-label" for="reason">Reason for Leave</label>
+                            <textarea id="reason" class="nts-form-control textarea" rows="4" placeholder="Please provide a detailed reason for your leave request..." required></textarea>
+                        </div>
+
+                        <div class="nts-form-group">
+                            <label class="nts-form-label" for="contact-info">Contact Information During Leave</label>
+                            <input type="text" id="contact-info" class="nts-form-control" placeholder="Phone number or email where you can be reached if necessary">
+                        </div>
+
+                        <div class="nts-form-group">
+                            <label class="nts-form-label" for="covering-staff">Covering Staff Member (if applicable)</label>
+                            <select id="covering-staff" class="nts-form-control">
+                                <option value="">Select covering staff member</option>
+                                <option value="michael-smith">Michael Smith</option>
+                                <option value="sarah-johnson">Sarah Johnson</option>
+                                <option value="emily-davis">Emily Davis</option>
+                                <option value="robert-wilson">Robert Wilson</option>
+                                <option value="mark-thompson">Mark Thompson</option>
+                            </select>
+                        </div>
+
+                        <div class="nts-form-group">
+                            <label class="nts-form-label" for="handover-notes">Handover Notes</label>
+                            <textarea id="handover-notes" class="nts-form-control textarea" rows="3" placeholder="Any important tasks or responsibilities that need to be handled during your absence..."></textarea>
+                        </div>
+
+                        <div class="nts-form-group">
+                            <label class="nts-form-label" for="supporting-documents">Supporting Documents (if required)</label>
+                            <input type="file" id="supporting-documents" class="nts-form-control" multiple accept=".pdf,.doc,.docx,.jpg,.png">
+                            <small class="nts-text-muted">Upload medical certificates, travel documents, or other supporting documents if required.</small>
+                        </div>
+
+                        <div class="nts-form-group">
+                            <div style="display: flex; align-items: center; gap: 10px;">
+                                <input type="checkbox" id="agree-terms" required>
+                                <label for="agree-terms" style="margin: 0;">I confirm that the information provided is accurate and I understand the leave policy.</label>
+                            </div>
+                        </div>
+
+                        <div class="nts-mt-20">
+                            <button type="submit" class="nts-btn nts-btn-primary">Submit Leave Request</button>
+                            <button type="button" class="nts-btn nts-btn-secondary">Save as Draft</button>
+                            <button type="reset" class="nts-btn nts-btn-secondary">Clear Form</button>
+                            <a href="nts-leave-view.html" class="nts-btn nts-btn-warning">View Leave Balance</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Leave Policy Guidelines -->
+            <div class="nts-card">
+                <div class="nts-card-header">
+                    <h3>Leave Policy Guidelines</h3>
+                </div>
+                <div class="nts-card-body">
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+                        <div>
+                            <h4>📅 Annual Leave</h4>
+                            <ul style="margin: 10px 0; padding-left: 20px;">
+                                <li>Must be requested at least 2 weeks in advance</li>
+                                <li>Maximum 5 consecutive days without special approval</li>
+                                <li>Cannot be carried forward beyond December 31st</li>
+                                <li>Requires manager approval</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4>🏥 Sick Leave</h4>
+                            <ul style="margin: 10px 0; padding-left: 20px;">
+                                <li>Can be taken without prior notice</li>
+                                <li>Medical certificate required for 3+ days</li>
+                                <li>Notify supervisor within 2 hours of start time</li>
+                                <li>Unused days carry forward to next year</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4>👤 Personal Days</h4>
+                            <ul style="margin: 10px 0; padding-left: 20px;">
+                                <li>24 hours advance notice required</li>
+                                <li>Subject to operational requirements</li>
+                                <li>Cannot be taken during peak periods</li>
+                                <li>Lost if not used by year end</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4>🍼 Maternity/Paternity Leave</h4>
+                            <ul style="margin: 10px 0; padding-left: 20px;">
+                                <li>Must provide 4 weeks notice (or ASAP)</li>
+                                <li>Medical documentation required</li>
+                                <li>Contact HR for detailed arrangements</li>
+                                <li>Additional unpaid leave may be available</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pending Requests -->
+            <div class="nts-card">
+                <div class="nts-card-header">
+                    <h3>Your Pending Requests</h3>
+                </div>
+                <div class="nts-card-body">
+                    <table class="nts-table">
+                        <thead>
+                            <tr>
+                                <th>Request ID</th>
+                                <th>Leave Type</th>
+                                <th>Start Date</th>
+                                <th>End Date</th>
+                                <th>Days</th>
+                                <th>Status</th>
+                                <th>Submitted</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>LR2024001</td>
+                                <td><span class="nts-badge nts-badge-primary">Annual Leave</span></td>
+                                <td>2024-01-25</td>
+                                <td>2024-01-26</td>
+                                <td>2</td>
+                                <td><span class="nts-badge nts-badge-warning">Pending Approval</span></td>
+                                <td>2024-01-18</td>
+                                <td>
+                                    <button class="nts-btn nts-btn-primary nts-btn-small">View</button>
+                                    <button class="nts-btn nts-btn-secondary nts-btn-small">Edit</button>
+                                    <button class="nts-btn nts-btn-danger nts-btn-small">Cancel</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="nts-text-center nts-mt-20" id="no-pending-requests" style="display: none;">
+                        <p class="nts-text-muted">You have no pending leave requests.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Templates -->
+            <div class="nts-card">
+                <div class="nts-card-header">
+                    <h3>Quick Request Templates</h3>
+                </div>
+                <div class="nts-card-body">
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px;">
+                        <div style="border: 1px solid var(--nts-border); border-radius: 6px; padding: 15px; text-align: center;">
+                            <h4>🤧 Sick Day Today</h4>
+                            <p class="nts-text-muted">Quick sick leave for today</p>
+                            <button class="nts-btn nts-btn-primary nts-btn-small" onclick="quickSickDay()">Apply</button>
+                        </div>
+                        <div style="border: 1px solid var(--nts-border); border-radius: 6px; padding: 15px; text-align: center;">
+                            <h4>🏖️ Long Weekend</h4>
+                            <p class="nts-text-muted">Friday or Monday off</p>
+                            <button class="nts-btn nts-btn-primary nts-btn-small" onclick="quickLongWeekend()">Apply</button>
+                        </div>
+                        <div style="border: 1px solid var(--nts-border); border-radius: 6px; padding: 15px; text-align: center;">
+                            <h4>⏰ Half Day</h4>
+                            <p class="nts-text-muted">Morning or afternoon off</p>
+                            <button class="nts-btn nts-btn-primary nts-btn-small" onclick="quickHalfDay()">Apply</button>
+                        </div>
+                        <div style="border: 1px solid var(--nts-border); border-radius: 6px; padding: 15px; text-align: center;">
+                            <h4>👨‍⚕️ Medical Appointment</h4>
+                            <p class="nts-text-muted">Personal day for appointment</p>
+                            <button class="nts-btn nts-btn-primary nts-btn-small" onclick="quickMedical()">Apply</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/nts-leave-request.js"></script>
+</body>
+</html>
